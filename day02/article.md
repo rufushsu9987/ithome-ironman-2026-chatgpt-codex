@@ -139,6 +139,7 @@ Codex 的價值在於把規格變成 repository 裡可執行的變更；它不�
 | --- | --- |
 | 系列專案 | [ithome-ironman-2026-chatgpt-codex](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex) |
 | Day 2 文章來源 | [day02/article.md](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/blob/main/day02/article.md) |
+| 可執行範例與驗收測試 | [day02/example-api](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/tree/main/day02/example-api) |
 | Mermaid 風格架構圖原始檔 | [day02/diagrams](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/tree/main/day02/diagrams) |
 
 ## 今日小結
