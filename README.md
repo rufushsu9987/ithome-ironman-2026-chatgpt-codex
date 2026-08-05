@@ -11,6 +11,7 @@
 ## Day 2 收錄內容
 
 - `day02/article.md`：完整文章 Markdown 來源
+- `day02/example-api/`：可執行的訂單 CSV 匯出服務與 6 項驗收測試
 - `day02/diagrams/diagram_requirement_gate.svg`：需求收斂閘門
 - `day02/diagrams/diagram_acceptance_layers.svg`：可驗收規格五層次
 - `day02/diagrams/diagram_order_export_architecture.svg`：訂單 CSV 匯出非同步架構
