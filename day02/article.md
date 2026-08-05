@@ -131,6 +131,16 @@ Codex 的價值在於把規格變成 repository 裡可執行的變更；它不�
 
 最後回到 Deliver：把規格、決策紀錄、測試證據與未決問題一起交付。這樣下一個人接手時，不必從聊天紀錄猜測「當初到底想做什麼」。
 
+## GitHub 專案
+
+本文的 Markdown 來源與架構圖原始檔已公開保存於 GitHub，方便閱讀、下載與後續延伸：
+
+| 資源 | 連結 |
+| --- | --- |
+| 系列專案 | [ithome-ironman-2026-chatgpt-codex](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex) |
+| Day 2 文章來源 | [day02/article.md](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/blob/main/day02/article.md) |
+| Mermaid 風格架構圖原始檔 | [day02/diagrams](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/tree/main/day02/diagrams) |
+
 ## 今日小結
 
 Day 2 的核心不是更會下 prompt，而是建立一個拒絕模糊需求的閘門：ChatGPT 負責拆解與比較，團隊確認政策；Codex 負責在明確邊界內實作、測試並回報證據。明天再把這份規格推進到 repository 的 Plan，處理多代理協作時如何避免上下文漂移。
