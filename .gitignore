@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Generated media
+*.mp4
+*.mp3
+*.wav
+
+# Secrets and local environment
+.env
+.env.*
+*.token
+credentials*.json
+client_secret*.json
+token*.pickle
+
+# Python
+__pycache__/
+*.pyc
+.venv/
