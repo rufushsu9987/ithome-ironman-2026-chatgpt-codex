@@ -77,6 +77,19 @@
 
 這個參考架構把驗收條件落到實際元件：API 閘門負責權限與輸入驗證，Export API 以 `request id` 保證冪等，工作佇列與 Worker 處理大量資料，物件儲存提供短效下載連結；建立工作與下載行為則統一寫入稽核日誌。
 
+### 搭配 GitHub 實作範例
+
+本文不只提供規格與架構圖，我也準備了可直接執行的 Python 範例程式：[查看 Day 2 訂單 CSV 匯出範例](https://github.com/rufushsu9987/ithome-ironman-2026-chatgpt-codex/tree/main/day02/example-api)。
+
+範例包含 `ExportService`、工作佇列、匯出 Worker、租戶隔離、`request id` 冪等控制、短效下載網址與稽核事件，並附上 6 項驗收測試。下載 Repository 後可直接執行：
+
+```bash
+cd day02/example-api
+python3 -m unittest -v
+```
+
+目前 6 項測試均已實際執行通過，讀者可以一邊對照下方 Given / When / Then，一邊查看程式如何落實每項驗收條件。
+
 注意 `request id`、租戶條件與限時下載不是 UI 細節，而是可驗收的治理控制。它們會直接影響 repository 的介面、資料模型、測試與監控。
 
 ## 再看三個常見需求，怎麼改寫成可驗收規格
