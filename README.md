@@ -6,7 +6,7 @@
 
 | Day | 主題 | iThome | YouTube | 專案內容 |
 | --- | --- | --- | --- | --- |
-| 2 | 把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章與架構圖](./day02/) |
+| 2 | 別急著叫 AI 寫 Code！把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章、程式碼與架構圖](./day02/) |
 
 ## Day 2 收錄內容
 

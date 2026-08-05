@@ -1,4 +1,4 @@
-# Day 2｜把模糊需求變成可驗收規格：ChatGPT 拆解、Codex 落地的第一道閘門
+# Day 2｜別急著叫 AI 寫 Code！用 ChatGPT × Codex 把模糊需求變成可驗收規格
 
 ## 影片版
 
