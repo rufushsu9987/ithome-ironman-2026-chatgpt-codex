@@ -7,6 +7,7 @@
 | Day | 主題 | iThome | YouTube | 專案內容 |
 | --- | --- | --- | --- | --- |
 | 2 | 別急著叫 AI 寫 Code！把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章、程式碼與架構圖](./day02/) |
+| 3 | 別讓多代理各自解讀：用 Repository Context Pack 把 Plan 變成可追蹤契約 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 
 ## Day 2 收錄內容
 
@@ -16,6 +17,15 @@
 - `day02/diagrams/diagram_acceptance_layers.svg`：可驗收規格五層次
 - `day02/diagrams/diagram_order_export_architecture.svg`：訂單 CSV 匯出非同步架構
 
+## Day 3 收錄內容
+
+- `day03/article.md`：Repository Context Pack 與 Plan Contract 完整文章來源
+- `day03/example-context/`：可執行的 Context Gate 範例與測試
+- `day03/diagrams/context_pack_flow.mmd`：Context Pack 流程圖原始檔
+- `day03/diagrams/plan_contract.mmd`：Plan Contract 圖解原始檔
+- Day 3 YouTube 影片：[mW9jNtuN8Fo](https://www.youtube.com/watch?v=mW9jNtuN8Fo)
+- Day 3 iThome 文章：[10401737](https://ithelp.ithome.com.tw/articles/10401737)
+
 ## 使用方式
 
 SVG 圖表可直接用瀏覽器開啟，也能轉成 PNG／JPG 後放入技術文章。文章中的範例著重：
@@ -23,5 +33,6 @@ SVG 圖表可直接用瀏覽器開啟，也能轉成 PNG／JPG 後放入技術�
 1. 把模糊自然語言轉成 Given／When／Then。
 2. 將 `OPEN` 未決項目留給團隊確認，不讓模型自行猜測。
 3. 由 Codex 在明確邊界內實作、測試並交付可重現證據。
+4. 用版本化 Context Pack 與 Plan Contract，讓多代理從同一份可驗證事實開始工作。
 
-後續 Day 內容會持續加入本專案。
+Day 4 之後的文章、影片與範例會持續加入本專案。
