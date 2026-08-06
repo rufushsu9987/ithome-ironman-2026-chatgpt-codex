@@ -1,4 +1,4 @@
-# Day 3｜別讓多代理各自解讀：用 Repository Context Pack 把 Plan 變成可追蹤契約
+# Day 3｜多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行
 
 ## 影片版
 
