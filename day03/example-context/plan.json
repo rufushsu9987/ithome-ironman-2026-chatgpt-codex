@@ -1,0 +1,34 @@
+{
+  "plan_version": 1,
+  "context_id": "orders-export",
+  "context_version": 3,
+  "status": "approved",
+  "tasks": [
+    {
+      "id": "export-api",
+      "goal": "加入權限與輸入邊界檢查",
+      "depends_on": [],
+      "paths": [
+        "src/export/api.py",
+        "tests/export/test_api.py"
+      ],
+      "acceptance_refs": ["AC-01", "AC-02"],
+      "verification": [
+        "python3 -m unittest -v tests/export/test_api.py"
+      ]
+    },
+    {
+      "id": "export-worker",
+      "goal": "讓背景工作只讀取原租戶資料並保留重試證據",
+      "depends_on": ["export-api"],
+      "paths": [
+        "src/export/worker.py",
+        "tests/export/test_worker.py"
+      ],
+      "acceptance_refs": ["AC-03", "AC-04"],
+      "verification": [
+        "python3 -m unittest -v tests/export/test_worker.py"
+      ]
+    }
+  ]
+}

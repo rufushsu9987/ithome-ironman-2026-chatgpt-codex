@@ -1,0 +1,18 @@
+{
+  "context_id": "orders-export",
+  "version": 3,
+  "source_commit": "demo-approved-commit",
+  "allowed_paths": [
+    "src/export/**",
+    "tests/export/**",
+    "docs/exports.md"
+  ],
+  "read_only_paths": [
+    "src/auth/**",
+    "config/**"
+  ],
+  "verification": [
+    "python3 -m unittest -v"
+  ],
+  "open_questions": []
+}

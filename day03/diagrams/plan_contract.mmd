@@ -1,0 +1,8 @@
+flowchart TB
+    C[Context Pack v3] --> P[Approved Plan]
+    P --> T1[Task export-api]
+    P --> T2[Task export-worker]
+    T1 --> T2
+    T1 --> V[Verification evidence]
+    T2 --> V
+    V --> R[Human review]
