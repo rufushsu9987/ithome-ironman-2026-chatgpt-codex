@@ -8,6 +8,7 @@
 | --- | --- | --- | --- | --- |
 | 2 | 別急著叫 AI 寫 Code！把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章、程式碼與架構圖](./day02/) |
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
+| 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
 
 ## Day 2 收錄內容
 
@@ -25,6 +26,15 @@
 - `day03/diagrams/plan_contract.mmd`：Plan Contract 圖解原始檔
 - Day 3 YouTube 影片：[mW9jNtuN8Fo](https://www.youtube.com/watch?v=mW9jNtuN8Fo)
 - Day 3 iThome 文章：[10401737](https://ithelp.ithome.com.tw/articles/10401737)
+
+## Day 4 收錄內容
+
+- `day04/article.md`：Execution Contract、工作樹隔離與停止條件完整文章來源
+- `day04/example-execution-guard/`：可執行的 Execution Guard 範例與 9 項測試
+- `day04/diagrams/execution_boundary.mmd`：執行邊界流程圖原始檔
+- `day04/diagrams/stop_conditions.mmd`：停止條件狀態圖原始檔
+- Day 4 YouTube 影片：[k2UEzgYGGyw](https://www.youtube.com/watch?v=k2UEzgYGGyw)
+- Day 4 iThome 文章：[10401856](https://ithelp.ithome.com.tw/articles/10401856)
 
 ## 使用方式
 

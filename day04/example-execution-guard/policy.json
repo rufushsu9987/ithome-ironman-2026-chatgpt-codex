@@ -1,0 +1,29 @@
+{
+  "context_id": "orders-export",
+  "context_version": 3,
+  "source_commit": "approved-commit",
+  "allowed_paths": [
+    "src/export/**",
+    "tests/export/**",
+    "docs/exports.md"
+  ],
+  "read_only_paths": [
+    "src/auth/**",
+    "config/**"
+  ],
+  "sensitive_patterns": [
+    ".env",
+    "*.pem",
+    "**/*secret*",
+    "**/*token*"
+  ],
+  "max_runtime_seconds": 900,
+  "network": "disabled",
+  "approval": "required_on_boundary",
+  "stop_conditions": [
+    "context_drift",
+    "path_violation",
+    "verification_failure",
+    "timeout"
+  ]
+}

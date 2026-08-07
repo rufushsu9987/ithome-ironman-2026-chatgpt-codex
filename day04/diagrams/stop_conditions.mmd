@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> Prepared
+    Prepared --> Running: guard passed
+    Prepared --> Blocked: missing or mismatched contract
+    Running --> Verifying: task finished
+    Running --> Blocked: context drift
+    Running --> Blocked: path violation
+    Running --> Blocked: timeout
+    Verifying --> Review: verification passed
+    Verifying --> Blocked: verification failed
+    Review --> Delivered: human approved diff
+    Review --> Blocked: scope or risk rejected
+    Blocked --> [*]: report evidence
+    Delivered --> [*]

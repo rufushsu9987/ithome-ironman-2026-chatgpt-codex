@@ -1,0 +1,10 @@
+flowchart LR
+    C[Approved Context Pack\nsource commit + version] --> P[Execution Contract\npolicy + plan]
+    P --> G{Execution Guard}
+    G -->|pass| W[Dedicated worktree\nagent/task-id]
+    G -->|fail closed| S[Stop and report\nno file changes]
+    W --> X[Codex task\nallowlisted paths]
+    X --> V[Verification commands\nnetwork disabled]
+    V --> R[Human diff review]
+    R --> D[Deliver evidence]
+    V -->|failure / drift / timeout| S

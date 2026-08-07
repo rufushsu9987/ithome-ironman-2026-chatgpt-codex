@@ -1,0 +1,25 @@
+{
+  "context_id": "orders-export",
+  "context_version": 3,
+  "source_commit": "approved-commit",
+  "status": "approved",
+  "tasks": [
+    {
+      "id": "export-api",
+      "branch": "agent/export-api",
+      "worktree": ".worktrees/export-api",
+      "paths": [
+        "src/export/api.py",
+        "tests/export/test_api.py"
+      ],
+      "commands": [
+        ["python3", "-m", "unittest", "-v", "tests/export/test_api.py"]
+      ],
+      "acceptance_refs": ["AC-01", "AC-02"],
+      "timeout_seconds": 600,
+      "network": "disabled",
+      "stop_on_drift": true,
+      "requires_human_review": true
+    }
+  ]
+}
