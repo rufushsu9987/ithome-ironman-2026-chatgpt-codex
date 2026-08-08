@@ -9,6 +9,7 @@
 | 2 | 別急著叫 AI 寫 Code！把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章、程式碼與架構圖](./day02/) |
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
+| 5 | 每個 Agent 都說完成了？用 Verify Matrix 收斂測試、Diff 與交付證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s) | [文章、範例與圖解](./day05/) |
 
 ## Day 2 收錄內容
 
@@ -36,6 +37,15 @@
 - Day 4 YouTube 影片：[k2UEzgYGGyw](https://www.youtube.com/watch?v=k2UEzgYGGyw)
 - Day 4 iThome 文章：[10401856](https://ithelp.ithome.com.tw/articles/10401856)
 
+## Day 5 收錄內容
+
+- `day05/article.md`：Verify Matrix、測試證據與交付判斷完整文章來源
+- `day05/example-verify-matrix/`：可執行的 Verify Matrix 範例與 12 項測試
+- `day05/diagrams/verify_matrix.mmd`：Verify Matrix 流程圖原始檔
+- `day05/diagrams/evidence_layers.mmd`：四層證據圖解原始檔
+- Day 5 YouTube 影片：[SLtDRNtKy0s](https://www.youtube.com/watch?v=SLtDRNtKy0s)
+- Day 5 iThome 文章：[10402088](https://ithelp.ithome.com.tw/articles/10402088)
+
 ## 使用方式
 
 SVG 圖表可直接用瀏覽器開啟，也能轉成 PNG／JPG 後放入技術文章。文章中的範例著重：
@@ -45,4 +55,4 @@ SVG 圖表可直接用瀏覽器開啟，也能轉成 PNG／JPG 後放入技術�
 3. 由 Codex 在明確邊界內實作、測試並交付可重現證據。
 4. 用版本化 Context Pack 與 Plan Contract，讓多代理從同一份可驗證事實開始工作。
 
-Day 4 之後的文章、影片與範例會持續加入本專案。
+Day 5 之後的文章、影片與範例會持續加入本專案。

@@ -1,0 +1,15 @@
+stateDiagram-v2
+    [*] --> Candidate
+    Candidate --> ContractChecked: identity matches
+    Candidate --> Blocked: context drift
+    ContractChecked --> ProcessChecked: commands exit 0
+    ContractChecked --> Blocked: scope mismatch
+    ProcessChecked --> BehaviorChecked: acceptance evidence complete
+    ProcessChecked --> Blocked: command failure
+    BehaviorChecked --> ReviewPending: diff and risks recorded
+    BehaviorChecked --> Blocked: acceptance gap
+    ReviewPending --> Verified: human review passed
+    ReviewPending --> Blocked: scope or risk rejected
+    Verified --> Delivered
+    Blocked --> [*]: report evidence
+    Delivered --> [*]

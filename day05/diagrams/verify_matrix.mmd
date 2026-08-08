@@ -1,0 +1,7 @@
+flowchart LR
+    C[Context ID + version + source commit] --> P[Process evidence\ncommands + exit code + logs]
+    P --> B[Behavior evidence\nAC-01 to AC-04]
+    B --> R[Review evidence\ndiff paths + risks + reviewer]
+    R --> G{Verify Matrix}
+    G -->|complete| D[Deliver decision]
+    G -->|missing / drift / failure| S[Blocked\nrepair or return to Plan]
