@@ -53,6 +53,8 @@
 - `day06/example-deliver-pack/`：可執行的 Deliver Pack 驗證器與 9 項測試
 - `day06/diagrams/deliver_pack_flow.mmd`：Deliver Pack 流程圖原始檔
 - `day06/diagrams/handoff_states.mmd`：Verified、Ready for handoff 與 Published 狀態圖原始檔
+- Day 6 YouTube 影片：[DIRZ35Ha8mo](https://www.youtube.com/watch?v=DIRZ35Ha8mo)
+- Day 6 iThome 文章：[10402184](https://ithelp.ithome.com.tw/articles/10402184)
 
 ## 使用方式
 
