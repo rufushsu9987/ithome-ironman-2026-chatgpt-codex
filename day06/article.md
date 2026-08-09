@@ -1,5 +1,9 @@
 # Day 6｜測試通過還不夠！用 Deliver Pack 讓下一個人接得上
 
+## 影片版
+
+本日影片：[Day 6｜測試通過還不夠！用 Deliver Pack 讓下一個人接得上](https://www.youtube.com/watch?v=DIRZ35Ha8mo)
+
 > 本文是 2026 iThome 鐵人賽系列「不只會寫 Code：用 ChatGPT × Codex 打造企業級 AI 開發工作流」第 6 天。
 
 前幾天，我們把一條 AI 輔助開發流程逐步收斂：
