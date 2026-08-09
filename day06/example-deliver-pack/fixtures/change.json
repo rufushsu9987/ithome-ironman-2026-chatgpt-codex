@@ -1,0 +1,10 @@
+{
+  "summary": "將訂單 CSV 匯出拆成 API 建立任務與 Worker 取用資料兩個步驟。",
+  "open_items": [
+    {"id": "OPEN-01", "owner": "product-owner", "action": "確認部署窗口與回滾檢查", "status": "open"}
+  ],
+  "next_step": {
+    "owner": "release-manager",
+    "action": "安排人工 Review 與部署窗口"
+  }
+}

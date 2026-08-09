@@ -1,0 +1,26 @@
+{
+  "context_id": "orders-export",
+  "context_version": 3,
+  "source_commit": "approved-commit",
+  "final_status": "verified",
+  "tasks": [
+    {
+      "id": "export-api",
+      "layers": {
+        "contract": {"status": "pass", "evidence": ["api-context.json"]},
+        "process": {"status": "pass", "commands": [{"argv": ["python3", "-m", "unittest", "-v"], "exit_code": 0, "evidence": "api-tests.log"}]},
+        "behavior": {"status": "pass", "acceptance": [{"ref": "AC-01", "status": "pass", "evidence": "api-AC-01.json"}, {"ref": "AC-02", "status": "pass", "evidence": "api-AC-02.json"}]},
+        "review": {"status": "pass", "reviewer": "engineering-review", "diff_paths": ["src/export/api.py", "tests/export/test_api.py"], "risks": [], "evidence": "api-review.md"}
+      }
+    },
+    {
+      "id": "export-worker",
+      "layers": {
+        "contract": {"status": "pass", "evidence": ["worker-context.json"]},
+        "process": {"status": "pass", "commands": [{"argv": ["python3", "-m", "unittest", "-v"], "exit_code": 0, "evidence": "worker-tests.log"}]},
+        "behavior": {"status": "pass", "acceptance": [{"ref": "AC-03", "status": "pass", "evidence": "worker-AC-03.json"}, {"ref": "AC-04", "status": "pass", "evidence": "worker-AC-04.json"}]},
+        "review": {"status": "pass", "reviewer": "engineering-review", "diff_paths": ["src/export/worker.py", "tests/export/test_worker.py"], "risks": [], "evidence": "worker-review.md"}
+      }
+    }
+  ]
+}

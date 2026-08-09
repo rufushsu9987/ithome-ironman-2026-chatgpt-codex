@@ -1,0 +1,19 @@
+{
+  "context_id": "orders-export",
+  "context_version": 3,
+  "source_commit": "approved-commit",
+  "tasks": [
+    {
+      "id": "export-api",
+      "paths": ["src/export/api.py", "tests/export/test_api.py"],
+      "acceptance_refs": ["AC-01", "AC-02"],
+      "requires_human_review": true
+    },
+    {
+      "id": "export-worker",
+      "paths": ["src/export/worker.py", "tests/export/test_worker.py"],
+      "acceptance_refs": ["AC-03", "AC-04"],
+      "requires_human_review": true
+    }
+  ]
+}

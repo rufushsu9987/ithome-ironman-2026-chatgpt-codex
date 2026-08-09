@@ -1,0 +1,8 @@
+flowchart LR
+    P[Plan identity] --> V[Verify Matrix]
+    V --> C{identity matches?}
+    C -->|yes| S[Change + evidence summary]
+    C -->|no| B[BLOCKED\nre-verify]
+    S --> O[OPEN items\nowner + action]
+    O --> N[Next step\nowner + action]
+    N --> D[Deliver Pack\nready for handoff]

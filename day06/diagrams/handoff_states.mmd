@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> Verified
+    Verified --> ReadyForHandoff: pack complete
+    Verified --> Blocked: missing evidence
+    ReadyForHandoff --> AwaitingDecision: OPEN item
+    ReadyForHandoff --> Published: authorized release
+    AwaitingDecision --> ReadyForHandoff: decision recorded
+    AwaitingDecision --> Blocked: decision rejects
+    Published --> [*]
+    Blocked --> [*]: repair and re-verify

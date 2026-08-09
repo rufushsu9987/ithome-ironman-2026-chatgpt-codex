@@ -10,6 +10,7 @@
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
 | 5 | 每個 Agent 都說完成了？用 Verify Matrix 收斂測試、Diff 與交付證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s) | [文章、範例與圖解](./day05/) |
+| 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | 待發布 | 待發布 | [文章、範例與圖解](./day06/) |
 
 ## Day 2 收錄內容
 
@@ -45,6 +46,13 @@
 - `day05/diagrams/evidence_layers.mmd`：四層證據圖解原始檔
 - Day 5 YouTube 影片：[SLtDRNtKy0s](https://www.youtube.com/watch?v=SLtDRNtKy0s)
 - Day 5 iThome 文章：[10402088](https://ithelp.ithome.com.tw/articles/10402088)
+
+## Day 6 收錄內容
+
+- `day06/article.md`：Deliver Pack、交接狀態與責任邊界完整文章來源
+- `day06/example-deliver-pack/`：可執行的 Deliver Pack 驗證器與 9 項測試
+- `day06/diagrams/deliver_pack_flow.mmd`：Deliver Pack 流程圖原始檔
+- `day06/diagrams/handoff_states.mmd`：Verified、Ready for handoff 與 Published 狀態圖原始檔
 
 ## 使用方式
 
