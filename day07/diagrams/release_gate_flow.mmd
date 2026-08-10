@@ -1,0 +1,13 @@
+flowchart LR
+    D1[Deliver Pack: API] --> V{All dependencies\nREADY_FOR_HANDOFF?}
+    D2[Deliver Pack: Worker] --> V
+    V -->|no| B1[BLOCKED\nrepair or re-verify]
+    V -->|yes| I{Version + source\ncommit aligned?}
+    I -->|no| B2[BLOCKED\nidentity drift]
+    I -->|yes| O{OPEN items\nresolved?}
+    O -->|no| B3[BLOCKED\nowner decision required]
+    O -->|yes| H{Human approval\nfor release owner?}
+    H -->|no| B4[BLOCKED\nno self-approval]
+    H -->|yes| R{Rollback owner +\ntriggers + steps?}
+    R -->|no| B5[BLOCKED\nrollback incomplete]
+    R -->|yes| G[READY_FOR_RELEASE\nenter release window]

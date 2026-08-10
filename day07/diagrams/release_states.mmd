@@ -1,0 +1,17 @@
+stateDiagram-v2
+    [*] --> HandoffReady
+    HandoffReady --> Blocked: dependency missing / identity drift
+    HandoffReady --> AwaitingDecision: OPEN item remains
+    AwaitingDecision --> HandoffReady: decision recorded
+    AwaitingDecision --> Blocked: decision rejects
+    HandoffReady --> AwaitingApproval: dependencies aligned
+    AwaitingApproval --> Blocked: no human approval
+    AwaitingApproval --> AwaitingRollback: approval recorded
+    AwaitingRollback --> Blocked: rollback incomplete
+    AwaitingRollback --> ReadyForRelease: owner + triggers + steps complete
+    ReadyForRelease --> Releasing: authorized release starts
+    Releasing --> Released: external verification passes
+    Releasing --> RolledBack: trigger fires
+    Released --> [*]
+    RolledBack --> [*]
+    Blocked --> [*]: repair and re-verify

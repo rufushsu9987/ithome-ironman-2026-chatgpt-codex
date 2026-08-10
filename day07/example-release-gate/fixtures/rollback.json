@@ -1,0 +1,5 @@
+{
+  "owner": "oncall",
+  "triggers": ["healthcheck_failure", "error_rate_threshold"],
+  "steps": ["stop rollout", "restore previous version", "verify healthcheck"]
+}

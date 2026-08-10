@@ -1,0 +1,7 @@
+{
+  "release_id": "release-v7",
+  "version": "2026.08.10",
+  "source_commit": "approved-commit",
+  "owner": "release-manager",
+  "dependencies": ["api", "worker"]
+}

@@ -1,0 +1,16 @@
+{
+  "api": {
+    "status": "READY_FOR_HANDOFF",
+    "version": "2026.08.10",
+    "source_commit": "approved-commit",
+    "artifact_paths": ["artifacts/api.tar.gz", "evidence/api-tests.log"],
+    "open_items": []
+  },
+  "worker": {
+    "status": "READY_FOR_HANDOFF",
+    "version": "2026.08.10",
+    "source_commit": "approved-commit",
+    "artifact_paths": ["artifacts/worker.tar.gz", "evidence/worker-tests.log"],
+    "open_items": []
+  }
+}
