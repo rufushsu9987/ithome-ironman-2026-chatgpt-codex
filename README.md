@@ -63,8 +63,8 @@
 - `day07/example-release-gate/`：可執行的 fail-closed Release Gate 驗證器、fixtures 與 7 項測試
 - `day07/diagrams/release_gate_flow.mmd`：多個 Deliver Pack 進入 Release Gate 的流程圖原始檔
 - `day07/diagrams/release_states.mmd`：OPEN、BLOCKED、READY 與 rollback 狀態圖原始檔
-- Day 7 YouTube 影片：[ZuFy4cbZ2EU](https://www.youtube.com/watch?v=ZuFy4cbZ2EU)
-- Day 7 iThome 文章：待發布後補上
+- Day 7 YouTube 影片：[[ZuFy4cbZ2EU](https://www.youtube.com/watch?v=ZuFy4cbZ2EU](https://youtu.be/CxkXkj0WBbY?si=KVppCOuNHouV5GwD))
+- Day 7 iThome 文章：[10402339](https://ithelp.ithome.com.tw/articles/10402339)
 
 ## 使用方式
 
@@ -74,5 +74,3 @@ SVG 圖表可直接用瀏覽器開啟，也能轉成 PNG／JPG 後放入技術�
 2. 將 `OPEN` 未決項目留給團隊確認，不讓模型自行猜測。
 3. 由 Codex 在明確邊界內實作、測試並交付可重現證據。
 4. 用版本化 Context Pack 與 Plan Contract，讓多代理從同一份可驗證事實開始工作。
-
-Day 5 之後的文章、影片與範例會持續加入本專案。
