@@ -10,8 +10,8 @@
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
 | 5 | 每個 Agent 都說完成了？用 Verify Matrix 收斂測試、Diff 與交付證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s) | [文章、範例與圖解](./day05/) |
-| 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | 待發布 | 待發布 | [文章、範例與圖解](./day06/) |
-| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | 待發布 | 待發布 | [文章、範例與圖解](./day07/) |
+| 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://youtu.be/DIRZ35Ha8mo?si=U6U3ICgxgOlXe-Jr) | [文章、範例與圖解](./day06/) |
+| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088)| [觀看影片](https://youtu.be/CxkXkj0WBbY?si=U4xQiz8pYxyjWtil) | [文章、範例與圖解](./day07/) |
 
 ## Day 2 收錄內容
 
