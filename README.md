@@ -63,7 +63,8 @@
 - `day07/example-release-gate/`：可執行的 fail-closed Release Gate 驗證器、fixtures 與 7 項測試
 - `day07/diagrams/release_gate_flow.mmd`：多個 Deliver Pack 進入 Release Gate 的流程圖原始檔
 - `day07/diagrams/release_states.mmd`：OPEN、BLOCKED、READY 與 rollback 狀態圖原始檔
-- Day 7 影片與 iThome 文章連結會在公開回讀完成後補上
+- Day 7 YouTube 影片：[ZuFy4cbZ2EU](https://www.youtube.com/watch?v=ZuFy4cbZ2EU)
+- Day 7 iThome 文章：待發布後補上
 
 ## 使用方式
 
