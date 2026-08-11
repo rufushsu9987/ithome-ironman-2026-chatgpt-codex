@@ -1,0 +1,13 @@
+{
+  "title": "Day 8｜發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原",
+  "provider": "claude-code-slides",
+  "format": "html",
+  "template": "claude-editorial",
+  "slides": 8,
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "source": "day08/article.md",
+  "visual_contract": "hero → incident timeline → lifecycle flow → JSONL audit → handoff pack → fail-closed gate → proof artifact → close"
+}

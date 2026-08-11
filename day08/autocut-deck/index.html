@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Day 8：用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原。" />
+  <title>Day 8｜Audit Trail 與 Incident Pack</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <div class="deck-shell">
+    <main id="deck" class="deck" aria-label="Day 8 Audit Trail and Incident Pack presentation" aria-live="polite">
+      <section class="slide slide--cover" data-title="Cover" data-layout="editorial-cover" data-autocut-duration="19.871">
+        <div class="topline"><span class="prompt-mark">&gt;</span><span>ITHOME IRONMAN 2026 · CHATGPT × CODEX</span><span>DAY 08</span></div>
+        <div class="cover-grid">
+          <div class="cover-copy">
+            <p class="eyebrow">DAY 08 / POST-PUBLISH CONTROL</p>
+            <h1>發布之後才是真正的考驗</h1>
+            <p class="lede">用 Audit Trail 與 Incident Pack，讓 AI 變更可追溯、可復原。</p>
+            <div class="cover-meta"><span>Release → Observe → Recover</span><span>責任鏈不在發布按鈕後斷掉</span></div>
+          </div>
+          <div class="incident-orbit" aria-label="Post-publish incident signal">
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="signal-card"><span class="signal-kicker">一小時後</span><strong>健康檢查變紅</strong><small>誰做了什麼？現在真的恢復了嗎？</small></div>
+            <div class="orbit-label">TRACE <span>→</span> RECOVER</div>
+          </div>
+        </div>
+        <aside class="notes">版本發布出去，不代表事情結束。真正的考驗，往往是在一小時後：健康檢查變紅、使用者開始回報錯誤，但團隊還找不到完整的行動紀錄。Day 8 要把發布後的追蹤與復原，變成可以回看的證據。</aside>
+      </section>
+
+      <section class="slide" data-title="事故時間線" data-layout="incident-timeline" data-autocut-duration="22.300">
+        <header class="slide-header"><p class="eyebrow">01 / THE INCIDENT</p><span class="mono-label">證據散落各處</span></header>
+        <div class="title-row"><div><h2>紅燈出現，但現場沒有共同時間線。</h2><p class="body-copy">每個人都記得一小段；沒有人能還原全部。</p></div><span class="big-index">01</span></div>
+        <div class="timeline" aria-label="Scattered incident evidence timeline">
+          <div class="timeline-line"></div>
+          <article class="timeline-node node-green"><span>09:12</span><strong>部署完成</strong><small>版本已出去</small></article>
+          <article class="timeline-node node-red"><span>09:18</span><strong>健康檢查失敗</strong><small>監控亮紅燈</small></article>
+          <article class="timeline-node node-orange"><span>09:21</span><strong>聊天室說回滾</strong><small>沒有正式事件</small></article>
+          <article class="timeline-node node-blue"><span>09:29</span><strong>工單補描述</strong><small>時間已經落後</small></article>
+          <article class="timeline-node node-muted"><span>?</span><strong>版本與核准人不明</strong><small>誰負責？</small></article>
+        </div>
+        <div class="warning-note"><span>問題</span> 沒有共同 change id，就很難回答「這次事故到底屬於哪個變更？」</div>
+        <footer class="slide-footer"><span>post-publish / incident timeline</span><span>02</span></footer>
+        <aside class="notes">想像一個很常見的情境：變更已經部署，監控卻在幾分鐘後亮起紅燈。有人在聊天室說「先回滾」，有人在工單補描述，還有人只記得自己做過檢查。事後回頭看，沒有人能快速回答：哪個版本、誰核准、何時開始、為什麼回滾。</aside>
+      </section>
+
+      <section class="slide" data-title="發布後流程" data-layout="lifecycle-flow" data-autocut-duration="23.845">
+        <header class="slide-header"><p class="eyebrow">02 / THE CHAIN</p><span class="mono-label">同一個 CHANGE ID</span></header>
+        <div class="title-row"><div><h2>把發布後流程串成一條責任鏈。</h2><p class="body-copy">重要動作都留下事件，按順序回讀。</p></div><span class="big-index">02</span></div>
+        <div class="lifecycle" aria-label="Release to recovery lifecycle">
+          <div class="life-step"><span class="life-dot dot-cyan">e1</span><strong>核准</strong><small>release approved</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-blue">e2</span><strong>部署</strong><small>deployed</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-orange">e3</span><strong>健康檢查</strong><small>failed</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-red">e4</span><strong>事故</strong><small>opened</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-orange">e5</span><strong>回滾</strong><small>started</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-cyan">e6</span><strong>恢復</strong><small>resolved</small></div>
+        </div>
+        <div class="id-chip"><span>change_id</span><code>orders-export-20260811</code></div>
+        <footer class="slide-footer"><span>post-publish / ordered evidence</span><span>03</span></footer>
+        <aside class="notes">解法不是多寫一份報告，而是讓每一個重要動作都留下事件。從發布核准、部署、健康檢查，到事故開啟、回滾與恢復，全部使用同一個 change id 串起來。這條時間線，就是 Audit Trail，也就是可追溯的行動紀錄。</aside>
+      </section>
+
+      <section class="slide" data-title="Audit Trail" data-layout="jsonl-audit" data-autocut-duration="29.365">
+        <header class="slide-header"><p class="eyebrow">03 / AUDIT TRAIL</p><span class="mono-label">APPEND-ONLY JSONL</span></header>
+        <div class="title-row"><div><h2>只追加，不覆寫。</h2><p class="body-copy">每一筆事件都是可回讀的證據。</p></div><span class="big-index">03</span></div>
+        <div class="audit-table" role="table" aria-label="Audit Trail events">
+          <div class="audit-row audit-head"><span>event</span><span>type</span><span>time</span><span>change</span></div>
+          <div class="audit-row"><b class="event-cyan">e1</b><code>release_approved</code><span>09:12</span><small>orders-export</small></div>
+          <div class="audit-row"><b class="event-blue">e2</b><code>deployed</code><span>09:14</span><small>orders-export</small></div>
+          <div class="audit-row"><b class="event-red">e3</b><code>health_check_failed</code><span>09:18</span><small>orders-export</small></div>
+          <div class="audit-row"><b class="event-red">e4</b><code>incident_opened</code><span>09:20</span><small>orders-export</small></div>
+          <div class="audit-row"><b class="event-orange">e5</b><code>rollback_started</code><span>09:23</span><small>orders-export</small></div>
+          <div class="audit-row"><b class="event-cyan">e6</b><code>incident_resolved</code><span>09:29</span><small>orders-export</small></div>
+        </div>
+        <div class="rule-pills"><span class="pill-good">append-only ✓</span><span class="pill-bad">duplicate event id ✕</span><span class="pill-bad">mixed change id ✕</span></div>
+        <footer class="slide-footer"><span>post-publish / immutable evidence</span><span>04</span></footer>
+        <aside class="notes">在範例裡，Audit Trail 採用只追加、不覆寫的 JSONL。每筆事件都有 event id、時間、事件類型、變更 id 和證據。重複的 event id 會被拒絕，不同變更 id 混在同一條時間線也會被拒絕。這些限制，讓紀錄不會在事故後被悄悄改成另一個故事。</aside>
+      </section>
+
+      <section class="slide" data-title="Incident Pack" data-layout="handoff-pack" data-autocut-duration="24.508">
+        <header class="slide-header"><p class="eyebrow">04 / INCIDENT PACK</p><span class="mono-label">HANDOFF WITHOUT GUESSING</span></header>
+        <div class="title-row"><div><h2>事故交接，不靠「我記得」。</h2><p class="body-copy">把現場整理成下一個人能直接判斷的包。</p></div><span class="big-index">04</span></div>
+        <div class="pack-grid">
+          <article class="pack-card pack-cyan"><span class="pack-number">01</span><h3>發生什麼</h3><p>版本、時間、健康檢查與影響範圍。</p></article>
+          <article class="pack-card pack-orange"><span class="pack-number">02</span><h3>誰做了什麼</h3><p>核准、部署、調查、回滾與責任人。</p></article>
+          <article class="pack-card pack-blue"><span class="pack-number">03</span><h3>現在好了嗎</h3><p>resolved 事件、恢復證據與後續行動。</p></article>
+        </div>
+        <div class="pack-equation"><code>時間線</code><span>＋</span><code>證據</code><span>＋</span><code>目前狀態</code><span>＝</span><strong>Incident Pack</strong></div>
+        <footer class="slide-footer"><span>post-publish / handoff pack</span><span>05</span></footer>
+        <aside class="notes">發生事故時，Audit Trail 還要被整理成 Incident Pack。它回答三個問題：當下發生什麼、誰做了什麼、現在是否真的恢復。包含時間線、部署版本、健康檢查結果、回滾證據和目前狀態，讓接手的人不用重新猜測現場。</aside>
+      </section>
+
+      <section class="slide" data-title="Fail closed" data-layout="fail-closed" data-autocut-duration="29.807">
+        <header class="slide-header"><p class="eyebrow">05 / FAIL-CLOSED</p><span class="mono-label">NO EVIDENCE · NO SUCCESS</span></header>
+        <div class="title-row"><div><h2>不要用推測填補證據缺口。</h2><p class="body-copy">寧可 Blocked，也不要回報一個假的成功。</p></div><span class="big-index">05</span></div>
+        <div class="gate-layout">
+          <div class="gate-checks">
+            <div class="gate-row gate-ok"><span>✓</span><strong>有 release_approved？</strong><code>繼續</code></div>
+            <div class="gate-row gate-block"><span>×</span><strong>有 deployed？</strong><code>BLOCKED</code></div>
+            <div class="gate-row gate-block"><span>×</span><strong>事故已 resolved？</strong><code>不回報成功</code></div>
+            <div class="gate-row gate-ok"><span>✓</span><strong>change_id 一致？</strong><code>繼續</code></div>
+          </div>
+          <div class="blocked-card"><span class="blocked-kicker">FAIL-CLOSED OUTPUT</span><strong>BLOCKED</strong><p>AI 整理證據，但不能替人類發明證據。</p></div>
+        </div>
+        <footer class="slide-footer"><span>post-publish / rejection is evidence</span><span>06</span></footer>
+        <aside class="notes">這裡最重要的是 fail-closed。缺少部署事件，直接阻擋；事故沒有 resolved 事件，不回報成功；混入不同 change id，也直接拒絕。AI 可以幫忙整理證據，但不能用推測填補缺口。寧可輸出 Blocked，也不要產生看起來漂亮、實際無法追責的成功訊息。</aside>
+      </section>
+
+      <section class="slide" data-title="測試證據" data-layout="proof-artifact" data-autocut-duration="30.027">
+        <header class="slide-header"><p class="eyebrow">06 / PROOF ARTIFACT</p><span class="mono-label">TEST FIRST · VERIFIED OUTPUT</span></header>
+        <div class="title-row"><div><h2>測試不是裝飾，是責任邊界。</h2><p class="body-copy">成功路徑與拒絕路徑，都要能重跑。</p></div><span class="big-index">06</span></div>
+        <div class="proof-grid">
+          <div class="terminal-card"><div class="terminal-bar"><span></span><span></span><span></span><code>example-incident-pack</code></div><pre><span class="prompt">$</span> python3 -m unittest -v
+<span class="ok">✓ test_rollback_timeline</span>
+<span class="ok">✓ test_unresolved_is_not_success</span>
+<span class="ok">✓ test_missing_deploy_blocks</span>
+<span class="ok">✓ test_mixed_change_id_rejected</span>
+<span class="ok">✓ test_duplicate_event_id_rejected</span>
+
+<span class="result">Ran 5 tests  /  OK</span></pre></div>
+          <div class="result-card"><span class="result-kicker">fixture output</span><div><label>status</label><strong class="ok-text">resolved</strong></div><div><label>resolution</label><strong class="orange-text">rollback</strong></div><div><label>last_event</label><strong>e6</strong></div></div>
+        </div>
+        <footer class="slide-footer"><span>post-publish / reproducible evidence</span><span>07</span></footer>
+        <aside class="notes">Day 8 範例先寫測試，再完成實作。測試涵蓋回滾事故時間線、未解決事故不得報成功、缺少部署事件、不同 change id，以及重複 event id。實際執行五項測試全部通過，fixture 也輸出 resolved 與 rollback。這就是可以交給下一個人的證據。</aside>
+      </section>
+
+      <section class="slide slide--closing" data-title="Close the loop" data-layout="editorial-close" data-autocut-duration="34.885">
+        <header class="slide-header"><p class="eyebrow">07 / CLOSE THE LOOP</p><span class="mono-label">TRACE → RECOVER</span></header>
+        <div class="close-copy"><h2>發布之後，才是真正的考驗。</h2><p class="close-lede">可追溯，才可復原。</p></div>
+        <div class="responsibility-chain" aria-label="Responsibility chain from requirement to recovery">
+          <span>需求</span><i>→</i><span>Context</span><i>→</i><span>執行</span><i>→</i><span>Verify</span><i>→</i><span>Deliver</span><i>→</i><span>Release</span><i>→</i><span class="chain-final">Recover</span>
+        </div>
+        <div class="close-equation"><code>Audit Trail</code><span>＋</span><code>Incident Pack</code><span>＋</span><code>fail-closed</code><span>＝</span><strong>責任鏈完成</strong></div>
+        <div class="close-footer">ChatGPT × Codex：把每一次變更，留下下一次能接手的證據。</div>
+        <aside class="notes">從需求、Context、執行、Verify、Deliver Pack，到 Release Gate，責任鏈不能在發布按鈕之後斷掉。Audit Trail 讓變更可追溯，Incident Pack 讓事故可交接，fail-closed 讓不完整證據不能冒充成功。發布不是終點；可追溯、可復原，才是這條鏈真正完成的地方。</aside>
+      </section>
+    </main>
+
+    <nav class="deck-ui" aria-label="Deck controls">
+      <button id="prevButton" type="button" aria-label="上一頁">←</button>
+      <button id="nextButton" type="button" aria-label="下一頁">→</button>
+      <span id="pageCounter">1 / 8</span>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <button id="notesButton" type="button">講稿</button>
+    </nav>
+    <aside id="notesPanel" class="notes-panel" hidden><button id="closeNotes" type="button">×</button><pre id="notesContent"></pre></aside>
+  </div>
+  <script src="slides.js"></script>
+</body>
+</html>
