@@ -72,8 +72,21 @@
 - `day08/article.md`：發布後 Audit Trail、Incident Pack 與事故復原完整文章來源
 - `day08/example-incident-pack/`：可執行的事件驗證、JSONL Audit Trail 與 Incident Pack 範例，含 5 項測試
 - `day08/diagrams/incident_lifecycle.mmd`：發布後健康檢查、事故處理與回滾流程圖原始檔
-- Day 8 YouTube 影片：待製作
+- `day08/autocut-deck/`：Day 8 AutoCut HTML deck、theme、slides.js、template.json
+- Day 8 影片：`ithome-promo-runs/day08/promo/video/day08-final.mp4`
+- Day 8 封面：`ithome-promo-runs/day08/promo/video/youtube-thumbnail-day08.jpg`
+- Day 8 字幕：`ithome-promo-runs/day08/promo/video/autocut-day08-subtitles.srt`
+- Day 8 YouTube 影片：待上傳
 - Day 8 iThome 文章：待發布
+
+## Day 8 影片 QA
+
+- AutoCut render：`autocut-silent.mp4` → `autocut-30fps.mp4` → `day08-final.mp4`
+- FFprobe：H.264 1920x1080 30fps / AAC / 214.566667s
+- Full decode：exit 0
+- Audio sanity：AAC stereo present
+- Contact sheet：16 samples across full timeline
+- Subtitles：25 SRT chunks from manifest speaker notes
 
 ## 使用方式
 
