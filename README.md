@@ -10,8 +10,9 @@
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
 | 5 | 每個 Agent 都說完成了？用 Verify Matrix 收斂測試、Diff 與交付證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s) | [文章、範例與圖解](./day05/) |
-| 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402184) | [觀看影片](https://youtu.be/DIRZ35Ha8mo?si=U6U3ICgxgOlXe-Jr) | [文章、範例與圖解](./day06/) |
-| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339)| [觀看影片](https://youtu.be/CxkXkj0WBbY?si=U4xQiz8pYxyjWtil) | [文章、範例與圖解](./day07/) |
+| 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402184) | [觀看影片](https://www.youtube.com/watch?v=DIRZ35Ha8mo) | [文章、範例與圖解](./day06/) |
+| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=ZuFy4cbZ2EU) | [文章、範例與圖解](./day07/) |
+| 8 | 發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原 | 待發布 | 待發布 | [文章、範例與圖解](./day08/) |
 
 ## Day 2 收錄內容
 
@@ -65,6 +66,14 @@
 - `day07/diagrams/release_states.mmd`：OPEN、BLOCKED、READY 與 rollback 狀態圖原始檔
 - Day 7 YouTube 影片：[[ZuFy4cbZ2EU](https://www.youtube.com/watch?v=ZuFy4cbZ2EU](https://youtu.be/CxkXkj0WBbY?si=KVppCOuNHouV5GwD))
 - Day 7 iThome 文章：[10402339](https://ithelp.ithome.com.tw/articles/10402339)
+
+## Day 8 收錄內容
+
+- `day08/article.md`：發布後 Audit Trail、Incident Pack 與事故復原完整文章來源
+- `day08/example-incident-pack/`：可執行的事件驗證、JSONL Audit Trail 與 Incident Pack 範例，含 5 項測試
+- `day08/diagrams/incident_lifecycle.mmd`：發布後健康檢查、事故處理與回滾流程圖原始檔
+- Day 8 YouTube 影片：待製作
+- Day 8 iThome 文章：待發布
 
 ## 使用方式
 

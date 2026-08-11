@@ -1,0 +1,21 @@
+flowchart LR
+    A[Release Gate 通過] --> B[release_approved]
+    B --> C[deployed]
+    C --> D{健康檢查}
+    D -->|pass| E[health_check_passed]
+    E --> F[觀察並保留證據]
+    D -->|fail| G[incident_opened]
+    G --> H{處置決策}
+    H -->|修復| I[incident_resolved]
+    H -->|回滾| J[rollback_started]
+    J --> K[rollback_completed]
+    I --> L[Incident Pack resolved]
+    K --> L
+    G --> M[Incident Pack open\n禁止宣稱成功]
+
+    classDef gate fill:#e8f1ff,stroke:#3b82f6,color:#111827;
+    classDef failure fill:#fff1f2,stroke:#e11d48,color:#111827;
+    classDef success fill:#ecfdf5,stroke:#10b981,color:#111827;
+    class A,B,C gate;
+    class G,H,J,M failure;
+    class E,F,I,K,L success;
