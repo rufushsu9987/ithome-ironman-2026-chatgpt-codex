@@ -1,0 +1,15 @@
+{
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "created_at": "2026-08-12T00:00:00Z",
+  "max_age_hours": 24,
+  "learning_refs": [
+    {
+      "learning_id": "learn-export-async-001",
+      "status": "approved",
+      "scope": ["services/export/**"],
+      "evidence_refs": ["incident/e6-rollback-completed.json"],
+      "expires_at": "2026-08-20T00:00:00Z"
+    }
+  ]
+}

@@ -13,6 +13,7 @@
 | 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402184) | [觀看影片](https://www.youtube.com/watch?v=DIRZ35Ha8mo) | [文章、範例與圖解](./day06/) |
 | 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=ZuFy4cbZ2EU) | [文章、範例與圖解](./day07/) |
 | 8 | 發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原 | 待發布 | 待發布 | [文章、範例與圖解](./day08/) |
+| 10 | Learning Pack 放進 Context 就安全了嗎？用 Freshness Gate 擋住過期規則 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402721) | [觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs) | [文章、範例與圖解](./day10/) |
 
 ## Day 2 收錄內容
 
@@ -87,6 +88,22 @@
 - Audio sanity：AAC stereo present
 - Contact sheet：16 samples across full timeline
 - Subtitles：25 SRT chunks from manifest speaker notes
+
+## Day 10 收錄內容
+
+- `day10/PLAN.md`：Freshness Gate 題綱、驗收條件與媒體交付 gates
+- `day10/article.md`：Context 新鮮度、source commit、learning expiry 與 scope 完整文章來源
+- `day10/example-freshness-gate/`：可執行的唯讀 Freshness Gate 與 6 項測試
+- `day10/diagrams/freshness_gate_flow.mmd`：執行前 freshness 檢查流程圖原始檔
+- `day10/diagrams/freshness_states.mmd`：Fresh／Stale／Drifted／Blocked 狀態圖原始檔
+- Day 10 YouTube 影片：[Jt_6iBtCFjs](https://www.youtube.com/watch?v=Jt_6iBtCFjs)
+- Day 10 iThome 文章：[10402721](https://ithelp.ithome.com.tw/articles/10402721)
+
+## Day 10 影片 QA
+
+- FFprobe：H.264 1920x1080 25fps / AAC / 185.516s
+- Full decode：exit 0
+- Subtitles：`zh-TW` YouTube CC，status `serving`
 
 ## 使用方式
 

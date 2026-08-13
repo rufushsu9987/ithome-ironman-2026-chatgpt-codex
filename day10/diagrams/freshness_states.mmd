@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> Fresh
+    Fresh --> Stale: max_age exceeded
+    Fresh --> Drifted: source commit changed
+    Fresh --> Blocked: learning invalid / scope mismatch
+    Stale --> Blocked: cannot auto-renew
+    Drifted --> Blocked: rebuild Context required
+    Blocked --> Fresh: human rechecks and creates new Context
+    Fresh --> InUse: Freshness Gate allowed
+    InUse --> Blocked: new evidence invalidates premise

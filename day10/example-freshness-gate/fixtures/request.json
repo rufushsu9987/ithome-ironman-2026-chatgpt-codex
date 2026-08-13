@@ -1,0 +1,6 @@
+{
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "paths": ["services/export/api.py"],
+  "checked_at": "2026-08-12T06:00:00Z"
+}

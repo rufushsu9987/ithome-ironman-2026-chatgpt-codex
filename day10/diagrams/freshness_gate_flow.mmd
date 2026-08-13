@@ -1,0 +1,13 @@
+flowchart LR
+    A[Context Pack] --> B{context_id 相同？}
+    B -->|否| X[BLOCKED 跨服務]
+    B -->|是| C{source_commit 相同？}
+    C -->|否| Y[BLOCKED Context 漂移]
+    C -->|是| D{Context 未過期？}
+    D -->|否| Z[BLOCKED 重新建立 Context]
+    D -->|是| E[檢查 Learning]
+    E --> F{status、evidence、expiry 合格？}
+    F -->|否| W[BLOCKED 失效 learning]
+    F -->|是| G{paths 落在 scope？}
+    G -->|否| V[BLOCKED 範圍越界]
+    G -->|是| H[ALLOWED 進入 Plan／Codex]
