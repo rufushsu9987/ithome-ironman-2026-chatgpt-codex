@@ -14,6 +14,7 @@
 | 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=ZuFy4cbZ2EU) | [文章、範例與圖解](./day07/) |
 | 8 | 發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原 | 待發布 | 待發布 | [文章、範例與圖解](./day08/) |
 | 10 | Learning Pack 放進 Context 就安全了嗎？用 Freshness Gate 擋住過期規則 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402721) | [觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs) | [文章、範例與圖解](./day10/) |
+| 11 | Freshness Gate 通過就能一路改下去嗎？用 Change Budget 擋住範圍膨脹 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402889) | [觀看影片](https://www.youtube.com/watch?v=sWSrKdn0Hr4) | [文章、範例與圖解](./day11/) |
 
 ## Day 2 收錄內容
 
@@ -104,6 +105,22 @@
 - FFprobe：H.264 1920x1080 25fps / AAC / 185.516s
 - Full decode：exit 0
 - Subtitles：`zh-TW` YouTube CC，status `serving`
+
+## Day 11 收錄內容
+
+- `day11/PLAN.md`：Change Budget 題綱、驗收條件與媒體交付 gates
+- `day11/article.md`：路徑、命令、檔案數與 diff 預算的完整文章來源
+- `day11/example-change-budget/`：可執行的唯讀 Change Budget Gate、fixtures 與 8 項測試
+- `day11/diagrams/change_budget_flow.mmd`：Change Budget 執行流程圖原始檔
+- `day11/diagrams/change_budget_states.mmd`：Budget 狀態圖原始檔
+- Day 11 YouTube 影片：[sWSrKdn0Hr4](https://www.youtube.com/watch?v=sWSrKdn0Hr4)
+- Day 11 iThome 文章：[10402889](https://ithelp.ithome.com.tw/articles/10402889)
+
+## Day 11 影片 QA
+
+- FFprobe：H.264 1920x1080 25fps / AAC / 166.026s
+- Full decode：exit 0
+- Subtitles：`zh-TW` YouTube CC，53 個單行 cues，status `serving`
 
 ## 使用方式
 
