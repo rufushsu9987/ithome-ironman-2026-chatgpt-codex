@@ -6,6 +6,7 @@
 
 | Day | 主題 | iThome | YouTube | 專案內容 |
 | --- | --- | --- | --- | --- |
+| 1 | 從「會寫 Code」到可治理：為什麼企業需要 AI 開發工作流 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401215) | [觀看影片](https://www.youtube.com/watch?v=tX3immUNyMk) | [文章來源](./day01/) |
 | 2 | 別急著叫 AI 寫 Code！把模糊需求變成可驗收規格 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401615) | [觀看影片](https://www.youtube.com/watch?v=eXcyDbvCT_k) | [文章、程式碼與架構圖](./day02/) |
 | 3 | 多代理越多越快？用 Repository Context Pack 讓 Codex 有邊界地執行 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401737) | [觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo) | [文章、範例與圖解](./day03/) |
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、範例與圖解](./day04/) |
