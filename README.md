@@ -13,6 +13,7 @@
 | 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402184) | [觀看影片](https://www.youtube.com/watch?v=DIRZ35Ha8mo) | [文章、範例與圖解](./day06/) |
 | 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=ZuFy4cbZ2EU) | [文章、範例與圖解](./day07/) |
 | 8 | 發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原 | 待發布 | 待發布 | [文章、範例與圖解](./day08/) |
+| 9 | Day 9｜事故處理完就結束了？用 Learning Pack 把生產證據帶回下一次 AI 變更 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402613) | [觀看影片](https://www.youtube.com/watch?v=gKLJz1hjh5o) | [文章、範例與圖解](./day09/) |
 | 10 | Learning Pack 放進 Context 就安全了嗎？用 Freshness Gate 擋住過期規則 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402721) | [觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs) | [文章、範例與圖解](./day10/) |
 | 11 | Freshness Gate 通過就能一路改下去嗎？用 Change Budget 擋住範圍膨脹 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402889) | [觀看影片](https://www.youtube.com/watch?v=sWSrKdn0Hr4) | [文章、範例與圖解](./day11/) |
 
@@ -89,6 +90,24 @@
 - Audio sanity：AAC stereo present
 - Contact sheet：16 samples across full timeline
 - Subtitles：25 SRT chunks from manifest speaker notes
+
+## Day 9 收錄內容
+
+- `day09/article.md`：完整文章 Markdown 來源
+- `day09/example-learning-pack/`：可執行的 Learning Pack 範例與測試
+- `day09/diagrams/learning_feedback_loop.mmd`：Learning Feedback Loop 圖解原始檔
+- `day09/autocut-deck/`：Day 9 AutoCut HTML deck、theme、slides.js、template.json
+- Day 9 YouTube 影片：[gKLJz1hjh5o](https://www.youtube.com/watch?v=gKLJz1hjh5o)
+- Day 9 iThome 文章：[10402613](https://ithelp.ithome.com.tw/articles/10402613)
+
+## Day 9 影片 QA
+
+- AutoCut：8 張逐頁 render
+- FFprobe：H.264 1920x1080 25fps / AAC / 153.124s
+- Full decode：exit 0
+- Audio sanity：mean -29.7 dB / max -11.4 dB
+- Contact sheet：8 張 midpoint samples
+- Subtitles：8 cues `zh-TW`，status `serving`
 
 ## Day 10 收錄內容
 

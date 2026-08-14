@@ -1,0 +1,24 @@
+[
+  {
+    "learning_id": "learn-export-async-001",
+    "context_id": "orders-export",
+    "incident_id": "inc-20260811-01",
+    "change_id": "orders-export-20260811",
+    "source_commit": "abc1234",
+    "observed_at": "2026-08-11T09:40:00Z",
+    "incident_status": "resolved",
+    "lesson": "大檔案匯出必須交給背景 worker，不在 request thread 直接產生檔案。",
+    "evidence_refs": [
+      "incident/e6-rollback-completed.json",
+      "tests/exports/test_large_file_timeout.py"
+    ],
+    "scope": [
+      "services/export/**",
+      "workers/export/**"
+    ],
+    "status": "approved",
+    "owner": "platform-owner",
+    "approved_by": "engineering-review",
+    "approved_at": "2026-08-12T01:10:00Z"
+  }
+]

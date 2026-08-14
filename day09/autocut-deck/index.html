@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Day 9：用 Learning Pack 把生產證據帶回下一次 AI 變更。" />
+  <title>Day 9｜Learning Pack 與證據回流</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <div class="deck-shell">
+    <main id="deck" class="deck" aria-label="Day 9 Learning Pack and evidence feedback presentation" aria-live="polite">
+      <section class="slide slide--cover" data-title="Cover" data-layout="editorial-cover" data-geometry="full-bleed">
+        <div class="topline"><span class="prompt-mark">&gt;</span><span>ITHOME IRONMAN 2026 · CHATGPT × CODEX</span><span>DAY 09</span></div>
+        <div class="cover-grid">
+          <div class="cover-copy">
+            <p class="eyebrow">DAY 09 / FEEDBACK CONTROL</p>
+            <h1>事故處理完就結束了？</h1>
+            <p class="lede">用 Learning Pack，把已確認的生產證據帶回下一次 AI 變更。</p>
+            <div class="cover-meta"><span>Incident → Learn → Context</span><span>恢復服務只是責任鏈的一半</span></div>
+          </div>
+          <div class="incident-orbit" aria-label="Evidence feedback loop">
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="signal-card"><span class="signal-kicker">下一次變更</span><strong>先帶入已驗證的學習</strong><small>不是把 AI 摘要直接寫成團隊政策。</small></div>
+            <div class="orbit-label">LEARN <span>→</span> APPLY</div>
+          </div>
+        </div>
+        <aside class="notes">Day 8 處理了事故發生後的追蹤與復原，但服務恢復不代表團隊已經學會。Day 9 要把已確認的生產證據整理成 Learning Pack，經過人工核准後帶回下一次 AI 變更，避免每次事故都從零開始。</aside>
+      </section>
+
+      <section class="slide" data-title="事故之後" data-layout="timeline" data-geometry="linear-spine">
+        <header class="slide-header"><p class="eyebrow">01 / THE GAP</p><span class="mono-label">RESOLVED ≠ LEARNED</span></header>
+        <div class="title-row"><div><h2>事故解決了，但下一個 agent 不知道。</h2><p class="body-copy">Incident Pack 保住這次的事實；Learning Pack 才把可重用的規則交給下一次工作。</p></div><span class="big-index">01</span></div>
+        <div class="timeline" aria-label="From incident resolution to next change">
+          <div class="timeline-line"></div>
+          <article class="timeline-node node-red"><span>09:18</span><strong>健康檢查失敗</strong><small>事故開始</small></article>
+          <article class="timeline-node node-orange"><span>09:23</span><strong>回滾完成</strong><small>服務恢復</small></article>
+          <article class="timeline-node node-blue"><span>09:40</span><strong>Incident Pack</strong><small>這次發生什麼</small></article>
+          <article class="timeline-node node-green"><span>下一週</span><strong>Learning Pack</strong><small>下次要記得什麼</small></article>
+          <article class="timeline-node node-muted"><span>Day 10</span><strong>新的 AI 變更</strong><small>是否真的帶入？</small></article>
+        </div>
+        <div class="warning-note"><span>缺口</span> 只保存事故結論，下一次 Context 仍然會遺失原本的證據。</div>
+        <footer class="slide-footer"><span>feedback / from incident to learning</span><span>02</span></footer>
+        <aside class="notes">想像訂單匯出事故已經回滾完成，Incident Pack 也標記 resolved。兩週後，新的 agent 要修改同一個服務，卻不知道上次事故告訴我們大檔案要交給背景 worker、回滾後要重新驗證。這就是恢復和學習之間的缺口。</aside>
+      </section>
+
+      <section class="slide" data-title="證據回流" data-layout="operating-loop" data-geometry="circular-loop">
+        <header class="slide-header"><p class="eyebrow">02 / THE CHAIN</p><span class="mono-label">PROPOSED → APPROVED → APPLIED</span></header>
+        <div class="title-row"><div><h2>把「學到了」變成一條可拒絕的流程。</h2><p class="body-copy">AI 可以提出候選學習；只有人類核准後，才能進入下一版 Context。</p></div><span class="big-index">02</span></div>
+        <div class="lifecycle" aria-label="Learning feedback lifecycle">
+          <div class="life-step"><span class="life-dot dot-cyan">e1</span><strong>事故已解決</strong><small>resolved</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-blue">e2</span><strong>提煉學習</strong><small>proposed</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-orange">e3</span><strong>人工 Review</strong><small>decision</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-red">e4</span><strong>版本化</strong><small>approved</small></div>
+          <div class="life-connector"></div>
+          <div class="life-step"><span class="life-dot dot-cyan">e5</span><strong>套用 Context</strong><small>applied</small></div>
+        </div>
+        <div class="id-chip"><span>learning_id</span><code>learn-export-async-001</code></div>
+        <footer class="slide-footer"><span>feedback / controlled knowledge</span><span>03</span></footer>
+        <aside class="notes">Learning Pack 的重點不是自動產生一份漂亮摘要，而是保留 proposed、approved、applied 的狀態。AI 可以從事件與測試提出候選；人類確認證據、範圍與責任後，才把 learning id 版本化並套用到下一個 Context。</aside>
+      </section>
+
+      <section class="slide" data-title="Learning Pack" data-layout="evidence-claim" data-geometry="evidence-anchor">
+        <header class="slide-header"><p class="eyebrow">03 / LEARNING PACK</p><span class="mono-label">EVIDENCE + SCOPE + OWNER</span></header>
+        <div class="title-row"><div><h2>一筆學習，必須回得去。</h2><p class="body-copy">沒有來源、證據與適用範圍的句子，只是意見，不是可套用的規則。</p></div><span class="big-index">03</span></div>
+        <div class="audit-table" role="table" aria-label="Learning Pack fields">
+          <div class="audit-row audit-head"><span>field</span><span>value</span><span>why</span><span>state</span></div>
+          <div class="audit-row"><b class="event-cyan">id</b><code>learn-export-async-001</code><span>可引用</span><small>stable</small></div>
+          <div class="audit-row"><b class="event-blue">source</b><code>inc-20260811 / abc1234</code><span>回到事故</span><small>traceable</small></div>
+          <div class="audit-row"><b class="event-orange">scope</b><code>services/export/**</code><span>限制污染</span><small>bounded</small></div>
+          <div class="audit-row"><b class="event-red">owner</b><code>platform-owner</code><span>有人負責</span><small>owned</small></div>
+          <div class="audit-row"><b class="event-cyan">status</b><code>approved</code><span>可套用</span><small>reviewed</small></div>
+        </div>
+        <div class="rule-pills"><span class="pill-good">evidence ✓</span><span class="pill-good">scope ✓</span><span class="pill-bad">無 owner ✕</span></div>
+        <footer class="slide-footer"><span>feedback / reusable evidence</span><span>04</span></footer>
+        <aside class="notes">一筆 Learning Pack 至少要有 learning id、原始 incident、change id、source commit、evidence refs、scope、owner 和 approval。這些欄位讓下一個人知道規則從哪裡來、適用在哪裡，以及誰對它負責。缺少其中一項，就不應該直接套用。</aside>
+      </section>
+
+      <section class="slide" data-title="Fail closed" data-layout="decision-path" data-geometry="branch-path">
+        <header class="slide-header"><p class="eyebrow">04 / FAIL-CLOSED</p><span class="mono-label">NO APPROVAL · NO CONTEXT</span></header>
+        <div class="title-row"><div><h2>不要讓 AI 摘要變成團隊政策。</h2><p class="body-copy">把不完整的學習留在 proposed，不能偷偷進入共享 Context。</p></div><span class="big-index">04</span></div>
+        <div class="gate-layout">
+          <div class="gate-checks">
+            <div class="gate-row gate-ok"><span>✓</span><strong>事故 status 是 resolved？</strong><code>繼續</code></div>
+            <div class="gate-row gate-ok"><span>✓</span><strong>有 evidence_refs 與 scope？</strong><code>繼續</code></div>
+            <div class="gate-row gate-block"><span>×</span><strong>有人工 approved_by？</strong><code>BLOCKED</code></div>
+            <div class="gate-row gate-block"><span>×</span><strong>跨 context_id 套用？</strong><code>拒絕</code></div>
+          </div>
+          <div class="blocked-card"><span class="blocked-kicker">FAIL-CLOSED OUTPUT</span><strong>PROPOSED</strong><p>AI 可以提案，但不能自己把提案升級成規則。</p></div>
+        </div>
+        <footer class="slide-footer"><span>feedback / approval boundary</span><span>05</span></footer>
+        <aside class="notes">這裡延續前幾天的 fail-closed 原則。事故還沒 resolved、證據不完整、沒有人工核准，或 learning 與目前 Context 不同，都要阻擋。AI 可以整理候選內容，但不能自己核准自己的摘要，更不能把它直接寫進共享規則。</aside>
+      </section>
+
+      <section class="slide" data-title="套用規則" data-layout="comparison-matrix" data-geometry="matrix">
+        <header class="slide-header"><p class="eyebrow">05 / APPLY SAFELY</p><span class="mono-label">IDEMPOTENT · BOUNDED</span></header>
+        <div class="title-row"><div><h2>下一次工作只帶入對的學習。</h2><p class="body-copy">用 context id、scope 與 learning id，避免跨服務污染與重試重複。</p></div><span class="big-index">05</span></div>
+        <div class="pack-grid">
+          <article class="pack-card pack-cyan"><span class="pack-number">01</span><h3>對的 Context</h3><p><code>orders-export</code> 才能引用同一個 context 的學習。</p></article>
+          <article class="pack-card pack-orange"><span class="pack-number">02</span><h3>對的範圍</h3><p><code>services/export/**</code> 不擴大成整個 Repository 的規則。</p></article>
+          <article class="pack-card pack-blue"><span class="pack-number">03</span><h3>只加一次</h3><p>重跑 apply 仍然只保留一個 <code>learning_id</code>。</p></article>
+        </div>
+        <div class="pack-equation"><code>context_id</code><span>＋</span><code>scope</code><span>＋</span><code>idempotency</code><span>＝</span><strong>安全回流</strong></div>
+        <footer class="slide-footer"><span>feedback / bounded application</span><span>06</span></footer>
+        <aside class="notes">即使 Learning Pack 已核准，套用時仍然要檢查 context id 與適用範圍。這筆 orders-export 的學習不能套到 billing；服務內的規則也不能擴大成整個 Repository。最後用 learning id 做 idempotency key，讓 CI 或 agent 重試時不會重複加入。</aside>
+      </section>
+
+      <section class="slide" data-title="測試證據" data-layout="code-walkthrough" data-geometry="terminal-stage">
+        <header class="slide-header"><p class="eyebrow">06 / PROOF ARTIFACT</p><span class="mono-label">TEST FIRST · VERIFIED OUTPUT</span></header>
+        <div class="title-row"><div><h2>學習真的回流了嗎？用測試證明。</h2><p class="body-copy">成功路徑、拒絕路徑與重試行為，都要能重跑。</p></div><span class="big-index">06</span></div>
+        <div class="proof-grid">
+          <div class="terminal-card"><div class="terminal-bar"><span></span><span></span><span></span><code>example-learning-pack</code></div><pre><span class="prompt">$</span> python3 -m unittest -v
+<span class="ok">✓ test_build_approved_pack</span>
+<span class="ok">✓ test_open_incident_is_blocked</span>
+<span class="ok">✓ test_cross_context_rejected</span>
+<span class="ok">✓ test_missing_evidence_blocked</span>
+<span class="ok">✓ test_apply_is_idempotent</span>
+
+<span class="result">Ran 6 tests  /  OK</span></pre></div>
+          <div class="result-card"><span class="result-kicker">fixture output</span><div><label>pack</label><strong class="ok-text">approved</strong></div><div><label>context</label><strong>orders-export</strong></div><div><label>learning_refs</label><strong class="orange-text">1</strong></div></div>
+        </div>
+        <footer class="slide-footer"><span>feedback / reproducible evidence</span><span>07</span></footer>
+        <aside class="notes">Day 9 的範例用六項測試鎖住邊界：resolved incident 才能建立學習、缺少 evidence 或 scope 要阻擋、沒有人工核准不能套用、跨 Context 要拒絕，而同一個 learning id 重試兩次仍只加入一次。這讓「回流」不是口號，而是可以重跑的證據。</aside>
+      </section>
+
+      <section class="slide slide--closing" data-title="Close the loop" data-layout="closing-manifesto" data-geometry="dark-full-bleed">
+        <header class="slide-header"><p class="eyebrow">07 / CLOSE THE LOOP</p><span class="mono-label">INCIDENT → LEARN → CONTEXT</span></header>
+        <div class="close-copy"><h2>事故恢復是終點的一半。</h2><p class="close-lede">把證據帶回下一次變更，團隊才真的變可靠。</p></div>
+        <div class="responsibility-chain" aria-label="Responsibility chain from incident to next change">
+          <span>Incident</span><i>→</i><span>Evidence</span><i>→</i><span>Learning</span><i>→</i><span>Review</span><i>→</i><span>Context</span><i>→</i><span>Plan</span><i>→</i><span class="chain-final">Verify</span>
+        </div>
+        <div class="close-equation"><code>resolved</code><span>＋</span><code>approved</code><span>＋</span><code>idempotent</code><span>＝</span><strong>可回饋的責任鏈</strong></div>
+        <div class="close-footer">ChatGPT × Codex：不只修好這次，也讓下一次少猜一點。</div>
+        <aside class="notes">Day 8 的 Incident Pack 讓我們知道這次事故是否恢復；Day 9 的 Learning Pack 把已確認的證據帶回下一次 Context。只有 resolved、approved、有限範圍和 idempotent 套用都成立，責任鏈才完成回饋。ChatGPT 可以整理，Codex 可以在邊界內執行，人類仍然負責核准。</aside>
+      </section>
+    </main>
+
+    <nav class="deck-ui" aria-label="Deck controls">
+      <button id="prevButton" type="button" aria-label="上一頁">←</button>
+      <button id="nextButton" type="button" aria-label="下一頁">→</button>
+      <span id="pageCounter">1 / 8</span>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <button id="notesButton" type="button">講稿</button>
+    </nav>
+    <aside id="notesPanel" class="notes-panel" hidden><button id="closeNotes" type="button">×</button><pre id="notesContent"></pre></aside>
+  </div>
+  <script src="slides.js"></script>
+</body>
+</html>

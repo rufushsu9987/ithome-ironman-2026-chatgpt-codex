@@ -1,0 +1,11 @@
+flowchart LR
+    A[Incident Pack\nresolved] --> B[Extract facts\nevidence + impact]
+    B --> C[Learning Pack\nproposed]
+    C --> D{Human review}
+    D -->|missing evidence| E[Blocked\nrepair]
+    D -->|approved| F[Versioned learning]
+    F --> G[Context Pack\nlearning refs]
+    G --> H[Next Plan\nacceptance + scope]
+    H --> I[Codex + Verify]
+    I --> J[New evidence]
+    J --> A

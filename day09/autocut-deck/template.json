@@ -1,0 +1,13 @@
+{
+  "title": "Day 9｜事故處理完就結束了？用 Learning Pack 把生產證據帶回下一次 AI 變更",
+  "provider": "claude-code-slides",
+  "format": "html",
+  "template": "claude-editorial",
+  "slides": 8,
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "source": "day09/article.md",
+  "visual_contract": "feedback cover → incident gap → learning lifecycle → record fields → approval gate → bounded apply → proof artifact → close"
+}
