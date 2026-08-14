@@ -1,0 +1,12 @@
+{
+  "intent_id": "change-export-20260812-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "allowed_paths": ["services/export/**"],
+  "forbidden_paths": ["services/billing/**", ".github/**"],
+  "allowed_commands": ["python3 -m unittest -v", "python3 -m py_compile *"],
+  "max_files_changed": 3,
+  "max_diff_lines": 40,
+  "max_commands": 4,
+  "acceptance_ids": ["AC-01", "AC-02"]
+}

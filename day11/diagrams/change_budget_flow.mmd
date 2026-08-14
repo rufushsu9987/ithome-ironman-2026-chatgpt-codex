@@ -1,0 +1,9 @@
+flowchart LR
+    A[Freshness Gate\nallowed] --> B[Freeze Change Intent\nintent_id + paths + acceptance]
+    B --> C[Agent runs\nwithin execution contract]
+    C --> D[Runtime observation\npaths + commands + diff]
+    D --> E{Budget checks}
+    E -->|all within limit| F[READY_VERIFY\nenter Verify Matrix]
+    E -->|path / command / count exceeded| G[BLOCKED_BUDGET\nreason codes]
+    G --> H[Human replan\nnew intent required]
+    H --> B

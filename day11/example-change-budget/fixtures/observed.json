@@ -1,0 +1,12 @@
+{
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "paths_changed": [
+    "services/export/api.py",
+    "services/export/test_api.py"
+  ],
+  "diff_added": 18,
+  "diff_removed": 7,
+  "commands": ["python3 -m unittest -v"],
+  "checked_at": "2026-08-12T09:00:00Z"
+}

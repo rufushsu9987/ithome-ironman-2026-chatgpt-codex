@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> PLANNED
+    PLANNED --> RUNNING: intent frozen
+    RUNNING --> READY_VERIFY: observation within budget
+    RUNNING --> BLOCKED_BUDGET: path / command / diff exceeded
+    BLOCKED_BUDGET --> NEEDS_REPLAN: preserve evidence
+    NEEDS_REPLAN --> PLANNED: human approves new intent
+    READY_VERIFY --> VERIFYING: Verify Matrix starts
+    VERIFYING --> READY_VERIFY: evidence complete
+    VERIFYING --> BLOCKED_BUDGET: new change exceeds budget
