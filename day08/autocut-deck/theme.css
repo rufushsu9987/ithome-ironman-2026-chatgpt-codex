@@ -29,6 +29,7 @@ button, code, pre { font: inherit; }
 .slide::before { content: ""; position: absolute; width: 420px; height: 420px; top: -300px; right: -170px; border: 1px solid rgb(217 119 87 / 24%); border-radius: 50%; box-shadow: 0 0 0 90px rgb(217 119 87 / 3%), 0 0 0 180px rgb(217 119 87 / 2%); pointer-events: none; }
 .slide.is-active { display: flex; animation: page-in 360ms cubic-bezier(.2,.75,.25,1) both; }
 .slide > * { position: relative; z-index: 1; }
+.slide > .notes { display: none !important; }
 @keyframes page-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes draw { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }

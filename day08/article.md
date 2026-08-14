@@ -2,6 +2,14 @@
 
 > 本文是 2026 iThome 鐵人賽系列「不只會寫 Code：用 ChatGPT × Codex 打造企業級 AI 開發工作流」第 8 天。前七天從需求、Context、執行邊界、Verify Matrix、Deliver Pack 一路走到 Release Gate。今天繼續往發布後推進：當服務已經上線，卻在健康檢查或使用者回報中出現異常，我們如何知道發生了什麼、誰可以做決定，以及什麼時候才算真正恢復？
 
+## 影片版
+
+本日影片：
+
+https://www.youtube.com/watch?v=nZ_tF2Hj754
+
+影片使用 Fish Audio `s2.1-pro-free` 產生溫柔女聲旁白，並以 AutoCut 完成剪輯與驗證；繁體中文字幕採用可開關的 YouTube CC，不把字幕燒進畫面。
+
 ## 發布成功，不代表事情結束
 
 想像一個很常見的場景：訂單匯出功能通過測試，也通過 Day 7 的 Release Gate，接著部署到正式環境。幾分鐘後，健康檢查開始失敗，客服回報部分租戶無法下載檔案。
