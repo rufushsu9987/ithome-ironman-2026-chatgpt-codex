@@ -1,0 +1,8 @@
+flowchart LR
+    A[Freshness Gate\nContext still valid] --> B[Change Budget\nScope in bounds]
+    B --> C[Collect observation\nDiff + commands]
+    C --> D[Bind evidence\nintent + commit + observation]
+    D --> E{Required evidence complete?}
+    E -->|否| F[BLOCKED\nmissing or mismatched]
+    E -->|是| G[Verify Matrix\ncheck behavior]
+    G --> H[Deliver Pack]

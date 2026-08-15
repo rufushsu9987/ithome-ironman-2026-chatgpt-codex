@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> COLLECTING
+    COLLECTING --> BOUND: identity + required kinds match
+    COLLECTING --> BLOCKED_IDENTITY: intent/context/commit mismatch
+    COLLECTING --> BLOCKED_MISSING: diff/test/review missing
+    COLLECTING --> BLOCKED_SCOPE: diff path outside budget
+    BOUND --> READY_VERIFY: bundle is immutable
+    BLOCKED_IDENTITY --> COLLECTING: new evidence bundle
+    BLOCKED_MISSING --> COLLECTING: collect missing evidence
+    BLOCKED_SCOPE --> COLLECTING: replan with new intent
+    READY_VERIFY --> [*]

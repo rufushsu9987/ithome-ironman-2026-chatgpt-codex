@@ -1,0 +1,28 @@
+{
+  "evidence_id": "ev-export-20260812-001",
+  "intent_id": "intent-export-20260812-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "observation_id": "obs-20260812-001",
+  "captured_at": "2026-08-12T09:30:00Z",
+  "diff": {
+    "paths": ["services/export/api.py"],
+    "added": 12,
+    "removed": 3
+  },
+  "tests": {
+    "run_id": "test-20260812-001",
+    "command": "python3 -m unittest -v",
+    "status": "passed",
+    "result_digest": "sha256:example-result"
+  },
+  "review": {
+    "review_id": "review-20260812-001",
+    "status": "approved"
+  },
+  "artifacts": [
+    {"kind": "diff", "artifact_id": "diff-001", "source_commit": "abc1234"},
+    {"kind": "test-log", "artifact_id": "test-log-001", "source_commit": "abc1234"},
+    {"kind": "review", "artifact_id": "review-001", "source_commit": "abc1234"}
+  ]
+}

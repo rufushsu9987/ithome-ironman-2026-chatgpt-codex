@@ -1,0 +1,9 @@
+{
+  "intent_id": "intent-export-20260812-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "allowed_paths": ["services/export/**"],
+  "forbidden_paths": ["services/billing/**", ".github/**"],
+  "required_evidence": ["diff", "test-log", "review"],
+  "acceptance_ids": ["AC-01", "AC-02"]
+}
