@@ -17,3 +17,4 @@
 | 9 | 事故處理完就結束了？用 Learning Pack 把生產證據帶回下一次 AI 變更 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402613) | [觀看影片](https://www.youtube.com/watch?v=gKLJz1hjh5o) | [文章、範例與圖解](./day09/) |
 | 10 | Learning Pack 放進 Context 就安全了嗎？用 Freshness Gate 擋住過期規則 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402721) | [觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs) | [文章、範例與圖解](./day10/) |
 | 11 | Freshness Gate 通過就能一路改下去嗎？用 Change Budget 擋住範圍膨脹 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402889) | [觀看影片](https://www.youtube.com/watch?v=sWSrKdn0Hr4) | [文章、範例與圖解](./day11/) |
+| 12 | 測試通過就算是這次變更的證據嗎？用 Evidence Binding 綁住 diff、測試與 review | [閱讀文章](https://ithelp.ithome.com.tw/articles/10403128) | [觀看影片](https://www.youtube.com/watch?v=OdeYRhXQWQ8) | [文章、範例與圖解](./day12/) |
