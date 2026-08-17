@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "release_id": "release-29",
+    "environment": "staging",
+    "current_cohort": "canary-10",
+    "target_cohort": "canary-25",
+    "run_id": "run-29",
+    "promotion_id": "promotion-29-001",
+    "evidence_digest": "sha256:promotion-29-current",
+    "policy_version": "rollout-policy-v3"
+  },
+  "stage_order": ["observe", "metrics", "policy", "approval", "handoff"],
+  "stages": {
+    "observe": {
+      "state": "window_complete",
+      "evidence_digest": "sha256:promotion-29-current",
+      "run_id": "run-29",
+      "window_seconds": 900,
+      "sample_count": 2400,
+      "audit_event_id": "audit-29-observe"
+    },
+    "metrics": {
+      "state": "metrics_passed",
+      "evidence_digest": "sha256:promotion-29-current",
+      "run_id": "run-29",
+      "error_rate": 0.004,
+      "p95_ms": 240,
+      "saturation": 0.48,
+      "audit_event_id": "audit-29-metrics"
+    },
+    "policy": {
+      "state": "step_allowed",
+      "evidence_digest": "sha256:promotion-29-current",
+      "current_cohort": "canary-10",
+      "target_cohort": "canary-25",
+      "step_percent": 15,
+      "audit_event_id": "audit-29-policy"
+    },
+    "approval": {
+      "state": "approval_bound",
+      "evidence_digest": "sha256:promotion-29-current",
+      "owner": "release-owner",
+      "scope": "canary-10->canary-25",
+      "expires_at": "2026-08-14T12:00:00+00:00",
+      "audit_event_id": "audit-29-approval"
+    },
+    "handoff": {
+      "state": "handoff_ready",
+      "evidence_digest": "sha256:promotion-29-current",
+      "next_owner": "platform-executor",
+      "decision": "promote_to_next_cohort",
+      "idempotency_key": "promotion-29-001",
+      "audit_event_id": "audit-29-handoff"
+    }
+  },
+  "executed_promotions": []
+}

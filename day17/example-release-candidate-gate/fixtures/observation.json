@@ -1,0 +1,58 @@
+{
+  "intent_id": "intent-release-20260817-001",
+  "run_id": "run-release-20260817-001",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v2",
+  "environment_id": "env-python311",
+  "candidate_id": "rc-orders-20260817.1",
+  "target": "staging",
+  "now": "2026-08-17T10:30:00Z",
+  "checks": {
+    "smoke": "passed",
+    "compatibility": "passed",
+    "migration_dry_run": "passed"
+  },
+  "artifacts": [
+    {
+      "artifact_id": "release-bundle.tgz",
+      "status": "ready",
+      "artifact_digest": "sha256:release-v1",
+      "produced_by_run": "run-release-20260817-001",
+      "source_commit": "abc1234",
+      "input_digest": "sha256:orders-input-v2",
+      "environment_id": "env-python311",
+      "target": "staging"
+    },
+    {
+      "artifact_id": "release-manifest.json",
+      "status": "ready",
+      "artifact_digest": "sha256:manifest-v1",
+      "produced_by_run": "run-release-20260817-001",
+      "source_commit": "abc1234",
+      "input_digest": "sha256:orders-input-v2",
+      "environment_id": "env-python311",
+      "target": "staging"
+    },
+    {
+      "artifact_id": "rollback-bundle.tgz",
+      "status": "ready",
+      "artifact_digest": "sha256:rollback-v1",
+      "produced_by_run": "run-release-20260817-001",
+      "source_commit": "abc1234",
+      "input_digest": "sha256:orders-input-v2",
+      "environment_id": "env-python311",
+      "target": "staging"
+    }
+  ],
+  "rollback": {
+    "artifact_id": "rollback-bundle.tgz",
+    "artifact_digest": "sha256:rollback-v1",
+    "ready": true
+  },
+  "approval": {
+    "requested": true,
+    "granted": true,
+    "target": "staging",
+    "owner": "release-owner@example.invalid"
+  }
+}

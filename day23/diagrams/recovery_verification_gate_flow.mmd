@@ -1,0 +1,17 @@
+flowchart TD
+    A[Rollback executed] --> B[Fix recovery intent and identity]
+    B --> C{Rollback result completed?}
+    C -->|否| X1[BLOCKED_ROLLBACK]
+    C -->|是| D{Applied target matches?}
+    D -->|否| X2[BLOCKED_TARGET]
+    D -->|是| E[Collect recovery window]
+    E --> F{Window and samples complete?}
+    F -->|否| X3[BLOCKED_WINDOW]
+    F -->|是| G{Metrics and checks pass?}
+    G -->|否| X4[BLOCKED_RECOVERY]
+    G -->|是| H{Traffic serves target?}
+    H -->|否| X5[BLOCKED_TRAFFIC]
+    H -->|是| I{Evidence digest bound?}
+    I -->|否| X6[BLOCKED_EVIDENCE]
+    I -->|是| J[RECOVERY_VERIFIED]
+    J --> K[Human closes incident]

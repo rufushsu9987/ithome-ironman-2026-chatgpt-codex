@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> OBSERVING: freeze identity and thresholds
+    OBSERVING --> BLOCKED_IDENTITY: candidate or run drift
+    OBSERVING --> BLOCKED_WINDOW: window incomplete or samples short
+    OBSERVING --> BLOCKED_METRICS: threshold exceeded
+    OBSERVING --> BLOCKED_CHECKS: check missing or not passed
+    OBSERVING --> BLOCKED_TRAFFIC: route serves another candidate
+    OBSERVING --> POST_DEPLOYMENT_STABLE: window and evidence pass
+    BLOCKED_IDENTITY --> DECLARED: create new observation contract
+    BLOCKED_WINDOW --> OBSERVING: collect more samples
+    BLOCKED_METRICS --> OBSERVING: investigate and collect new evidence
+    BLOCKED_CHECKS --> OBSERVING: rerun checks with new evidence
+    BLOCKED_TRAFFIC --> OBSERVING: verify route read-back
+    POST_DEPLOYMENT_STABLE --> RELEASED_BY_HUMAN: human makes release decision
+    RELEASED_BY_HUMAN --> [*]

@@ -1,0 +1,14 @@
+flowchart TD
+    R[Retention inventory] --> I{Identity matches?}
+    A[Access request] --> I
+    P[Human approval] --> I
+    I -->|No| B[BLOCKED_IDENTITY]
+    I -->|Yes| S{Role and purpose allowed?}
+    S -->|No| B2[BLOCKED_SCOPE]
+    S -->|Yes| F{Evidence and fields minimal?}
+    F -->|No| B3[BLOCKED_FIELD_SCOPE]
+    F -->|Yes| T{Time and approval valid?}
+    T -->|No| B4[BLOCKED_POLICY]
+    T -->|Yes| O[ACCESS_ELIGIBLE]
+    O --> H[Human or IAM executes]
+    H --> Z[Audited read]

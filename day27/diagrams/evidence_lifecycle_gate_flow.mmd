@@ -1,0 +1,13 @@
+flowchart TD
+    C[Closeout observation] --> I{Identity matches?}
+    R[Retention observation] --> I
+    A[Access observation] --> I
+    I -->|No| BI[BLOCKED_IDENTITY]
+    I -->|Yes| O{Stage order valid?}
+    O -->|No| BO[BLOCKED_ORDER]
+    O -->|Yes| S{States and digests valid?}
+    S -->|No| BS[BLOCKED_STAGE]
+    S -->|Yes| E{Readback, approval and audit present?}
+    E -->|No| BE[BLOCKED_EVIDENCE]
+    E -->|Yes| P[PIPELINE_READY]
+    P --> H[Next execution boundary]

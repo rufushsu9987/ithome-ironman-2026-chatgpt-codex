@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "series_id": "chatgpt-codex-engineering",
+    "day": 30,
+    "contract_id": "delivery-30-001",
+    "run_id": "run-30",
+    "source_digest": "sha256:day30-source",
+    "evidence_digest": "sha256:day30-evidence",
+    "policy_version": "delivery-policy-v1",
+    "owner": "producer",
+    "target": "release-lane"
+  },
+  "stage_order": ["context", "plan", "execute", "verify", "review", "deliver"],
+  "stages": {
+    "context": {"state": "context_bound", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-context"},
+    "plan": {"state": "plan_approved", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-plan"},
+    "execute": {"state": "executed_scoped", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-execute"},
+    "verify": {"state": "verified", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-verify"},
+    "review": {"state": "review_complete", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-review"},
+    "deliver": {"state": "deliverable_bound", "evidence_digest": "sha256:day30-evidence", "audit_event_id": "audit-30-deliver"}
+  },
+  "deliverables": {
+    "article": {"status": "verified", "evidence_digest": "sha256:day30-evidence", "bytes": 12000, "path": "day30/article.md"},
+    "example": {"status": "verified", "evidence_digest": "sha256:day30-evidence", "bytes": 8000, "path": "day30/example-delivery-contract-gate/"},
+    "deck": {"status": "verified", "evidence_digest": "sha256:day30-evidence", "bytes": 64000, "path": "promo/day30/deck/index.html"},
+    "video": {"status": "verified", "evidence_digest": "sha256:day30-evidence", "bytes": 12000000, "path": "video/day30/day30-final.mp4"},
+    "subtitles": {"status": "verified", "evidence_digest": "sha256:day30-evidence", "bytes": 4000, "path": "video/day30/day30.srt"},
+    "media_qa": {"status": "verified", "qa_status": "PASS", "evidence_digest": "sha256:day30-evidence", "bytes": 9000, "path": "video/day30/day30-media-qa.json"}
+  },
+  "external_boundary": "release_lane",
+  "publication_status": "not_started",
+  "handoff": {"next_owner": "release-owner", "decision": "review-and-publish-if-authorized", "idempotency_key": "delivery-30-001"},
+  "executed_contracts": []
+}

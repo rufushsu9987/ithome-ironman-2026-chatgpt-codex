@@ -1,0 +1,16 @@
+{
+  "incident_id": "inc-26-001",
+  "closeout_id": "closeout-26-001",
+  "run_id": "run-26-1",
+  "evidence_digest": "sha256:incident-26-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "allowed_requester_roles": ["incident_responder", "incident_commander"],
+  "allowed_purposes": ["incident_investigation", "audit_review"],
+  "max_access_seconds": 1800,
+  "approval_max_age_seconds": 900,
+  "permitted_fields": {
+    "recovery": ["candidate_id", "state", "evidence_digest"],
+    "impact": ["window_seconds", "sample_count", "aggregate_metrics"]
+  }
+}

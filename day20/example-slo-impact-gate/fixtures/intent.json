@@ -1,0 +1,25 @@
+{
+  "intent_id": "intent-orders-current",
+  "run_id": "run-orders-current",
+  "candidate_id": "candidate-orders-current",
+  "source_commit": "commit-current",
+  "input_digest": "sha256:orders-input-current",
+  "environment_id": "env-staging-current",
+  "target": "staging",
+  "observation_window": {
+    "minimum_seconds": 300,
+    "minimum_samples": 10
+  },
+  "slo": {
+    "minimum_availability": 0.995,
+    "max_p95_latency_ms": 350,
+    "max_error_budget_burn_rate": 1.0
+  },
+  "required_checks": [
+    "window_complete",
+    "availability",
+    "latency",
+    "error_budget",
+    "traffic"
+  ]
+}

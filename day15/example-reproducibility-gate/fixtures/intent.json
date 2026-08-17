@@ -1,0 +1,10 @@
+{
+  "intent_id": "intent-export-20260815-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v1",
+  "environment_id": "env-python311",
+  "toolchain": {"python": "3.11", "runner": "codex-runner-1"},
+  "dependencies_lock_digest": "sha256:lock-v3",
+  "expected_outputs": ["trace.json", "report.json"]
+}

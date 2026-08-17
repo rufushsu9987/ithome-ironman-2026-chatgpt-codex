@@ -1,0 +1,9 @@
+{
+  "incident_id": "inc-27-001",
+  "closeout_id": "closeout-27-001",
+  "run_id": "run-27-1",
+  "evidence_digest": "sha256:incident-27-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "required_stages": ["closeout", "retention", "access"]
+}

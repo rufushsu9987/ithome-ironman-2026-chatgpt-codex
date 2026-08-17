@@ -1,0 +1,12 @@
+{
+  "incident_id": "inc-25-001",
+  "closeout_id": "closeout-25-001",
+  "run_id": "run-25-1",
+  "evidence_digest": "sha256:incident-25-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "min_retention_seconds": 604800,
+  "required_evidence": ["recovery", "impact", "followup", "learning", "approval"],
+  "required_access_scope": "incident:inc-25-001",
+  "legal_hold_required": true
+}

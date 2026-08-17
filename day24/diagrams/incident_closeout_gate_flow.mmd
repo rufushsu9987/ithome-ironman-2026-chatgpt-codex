@@ -1,0 +1,12 @@
+flowchart TD
+    A[Recovery verified] --> B[Bind incident identity]
+    B --> C{Impact window complete?}
+    C -->|否| X1[BLOCKED_IMPACT]
+    C -->|是| D{Critical follow-ups owned?}
+    D -->|否| X2[BLOCKED_FOLLOWUP]
+    D -->|是| E{Postmortem and learning bound?}
+    E -->|否| X3[BLOCKED_LEARNING]
+    E -->|是| F{Closeout approval valid?}
+    F -->|否| X4[BLOCKED_APPROVAL]
+    F -->|是| G[CLOSEOUT_ELIGIBLE]
+    G --> H[Human closes incident]

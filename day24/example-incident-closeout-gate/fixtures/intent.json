@@ -1,0 +1,16 @@
+{
+  "incident_id": "inc-24-001",
+  "recovery_id": "recovery-24-001",
+  "run_id": "run-24-1",
+  "candidate_id": "candidate-safe",
+  "source_commit": "commit-a",
+  "input_digest": "digest-a",
+  "environment_id": "env-prod",
+  "target": "production",
+  "evidence_digest": "sha256:recovery-current",
+  "min_impact_window_seconds": 1800,
+  "min_impact_samples": 200,
+  "critical_followups": ["monitoring", "data_audit", "runbook"],
+  "allowed_approval_roles": ["incident_commander", "service_owner"],
+  "approval_max_age_seconds": 900
+}

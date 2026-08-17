@@ -1,0 +1,13 @@
+flowchart LR
+    I[Rollout intent<br/>release / env / cohort / flag] --> B{Identity bound?}
+    B -->|No| BI[BLOCKED_IDENTITY]
+    B -->|Yes| C[Canary<br/>error rate / p95 / cohort]
+    C -->|Fail| BC[BLOCKED_CANARY]
+    C -->|Pass| F[Feature flag<br/>key / mapping / kill switch]
+    F -->|Fail| BF[BLOCKED_FLAG]
+    F -->|Pass| R[Rollback contract<br/>target / trigger / timeout]
+    R -->|Fail| BR[BLOCKED_ROLLBACK]
+    R -->|Pass| H[Health readback<br/>same run / same digest]
+    H -->|Fail| BH[BLOCKED_HEALTH]
+    H -->|Pass| P[PIPELINE_READY]
+    P --> X[下一個責任邊界]

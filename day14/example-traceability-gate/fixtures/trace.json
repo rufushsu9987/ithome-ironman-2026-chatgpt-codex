@@ -1,0 +1,45 @@
+{
+  "trace_id": "trace-20260814-001",
+  "intent_id": "intent-export-20260814-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "observation_id": "obs-20260814-001",
+  "captured_at": "2026-08-14T09:30:00Z",
+  "acceptance_results": [
+    {"acceptance_id": "AC-01", "status": "passed", "evidence_ids": ["artifact-01"]},
+    {"acceptance_id": "AC-02", "status": "passed", "evidence_ids": ["artifact-02"]},
+    {"acceptance_id": "AC-03", "status": "passed", "evidence_ids": ["artifact-03"]}
+  ],
+  "changes": [
+    {"change_id": "CH-01", "artifact_ids": ["artifact-01", "artifact-02", "artifact-03"]}
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-01",
+      "kind": "test-log",
+      "source_commit": "abc1234",
+      "acceptance_ids": ["AC-01"],
+      "change_ids": ["CH-01"]
+    },
+    {
+      "artifact_id": "artifact-02",
+      "kind": "test-log",
+      "source_commit": "abc1234",
+      "acceptance_ids": ["AC-02"],
+      "change_ids": ["CH-01"]
+    },
+    {
+      "artifact_id": "artifact-03",
+      "kind": "review",
+      "source_commit": "abc1234",
+      "acceptance_ids": ["AC-03"],
+      "change_ids": ["CH-01"]
+    }
+  ],
+  "release": {
+    "status": "approved",
+    "approved_by": "release-owner",
+    "approval_id": "approval-20260814-001",
+    "source_commit": "abc1234"
+  }
+}

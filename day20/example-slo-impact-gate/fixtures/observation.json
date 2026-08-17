@@ -1,0 +1,30 @@
+{
+  "intent_id": "intent-orders-current",
+  "run_id": "run-orders-current",
+  "candidate_id": "candidate-orders-current",
+  "source_commit": "commit-current",
+  "input_digest": "sha256:orders-input-current",
+  "environment_id": "env-staging-current",
+  "target": "staging",
+  "observation_window": {
+    "state": "complete",
+    "duration_seconds": 420,
+    "samples": 25
+  },
+  "metrics": {
+    "availability": 0.999,
+    "p95_latency_ms": 220,
+    "error_budget_burn_rate": 0.4
+  },
+  "checks": {
+    "window_complete": "passed",
+    "availability": "passed",
+    "latency": "passed",
+    "error_budget": "passed",
+    "traffic": "passed"
+  },
+  "traffic": {
+    "serving_candidate_id": "candidate-orders-current",
+    "route_state": "serving"
+  }
+}

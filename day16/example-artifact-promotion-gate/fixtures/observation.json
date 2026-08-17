@@ -1,0 +1,40 @@
+{
+  "intent_id": "intent-export-20260816-001",
+  "run_id": "run-export-20260816-001",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v1",
+  "environment_id": "env-python311",
+  "promotion": {
+    "requested": true,
+    "target": "release-candidate",
+    "owner": "release-owner@example.invalid"
+  },
+  "artifacts": [
+    {
+      "artifact_id": "export-bundle.tgz",
+      "status": "ready",
+      "artifact_digest": "sha256:bundle-v1",
+      "produced_by_run": "run-export-20260816-001",
+      "source_commit": "abc1234",
+      "input_digest": "sha256:orders-input-v1",
+      "environment_id": "env-python311",
+      "checks": {
+        "integrity": "passed",
+        "compatibility": "passed"
+      }
+    },
+    {
+      "artifact_id": "verification-report.json",
+      "status": "ready",
+      "artifact_digest": "sha256:report-v1",
+      "produced_by_run": "run-export-20260816-001",
+      "source_commit": "abc1234",
+      "input_digest": "sha256:orders-input-v1",
+      "environment_id": "env-python311",
+      "checks": {
+        "schema": "passed",
+        "source_match": "passed"
+      }
+    }
+  ]
+}

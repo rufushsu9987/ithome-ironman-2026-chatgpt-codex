@@ -1,0 +1,11 @@
+flowchart LR
+    I[Change Intent\nintent + context + source commit] --> A[Acceptance results\nAC-01…AC-N]
+    I --> C[Change list\nCH-01…CH-N]
+    A --> E[Evidence artifacts\nlogs / diff / review]
+    C --> E
+    E --> B{Identity and\nbidirectional links OK?}
+    B -->|否| X[BLOCKED\nmissing / mismatch / unlinked]
+    B -->|是| R[Release approval\nowner + approval id]
+    R --> G{Approved and\ncommit matches?}
+    G -->|否| Y[BLOCKED\nrelease_not_approved]
+    G -->|是| T[TRACEABLE\nhand to Verify / Release Gate]

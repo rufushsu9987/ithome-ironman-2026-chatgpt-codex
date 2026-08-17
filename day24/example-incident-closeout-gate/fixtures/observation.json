@@ -1,0 +1,65 @@
+{
+  "incident_id": "inc-24-001",
+  "recovery_id": "recovery-24-001",
+  "run_id": "run-24-1",
+  "candidate_id": "candidate-safe",
+  "source_commit": "commit-a",
+  "input_digest": "digest-a",
+  "environment_id": "env-prod",
+  "target": "production",
+  "observed_at_epoch": 5000,
+  "recovery": {
+    "state": "recovery_verified",
+    "evidence_digest": "sha256:recovery-current"
+  },
+  "customer_impact_window": {
+    "complete": true,
+    "duration_seconds": 1800,
+    "sample_count": 240
+  },
+  "followups": {
+    "monitoring": {
+      "owner_id": "alice",
+      "due_at_epoch": 5200,
+      "status": "completed",
+      "evidence_digest": "sha256:recovery-current"
+    },
+    "data_audit": {
+      "owner_id": "bob",
+      "due_at_epoch": 5200,
+      "status": "accepted",
+      "evidence_digest": "sha256:recovery-current"
+    },
+    "runbook": {
+      "owner_id": "carol",
+      "due_at_epoch": 5200,
+      "status": "completed",
+      "evidence_digest": "sha256:recovery-current"
+    }
+  },
+  "postmortem": {
+    "status": "published",
+    "incident_id": "inc-24-001",
+    "evidence_digest": "sha256:recovery-current"
+  },
+  "learning_pack": {
+    "status": "ready",
+    "incident_id": "inc-24-001",
+    "evidence_digest": "sha256:recovery-current"
+  },
+  "closeout_approval": {
+    "incident_id": "inc-24-001",
+    "recovery_id": "recovery-24-001",
+    "run_id": "run-24-1",
+    "candidate_id": "candidate-safe",
+    "source_commit": "commit-a",
+    "input_digest": "digest-a",
+    "environment_id": "env-prod",
+    "target": "production",
+    "approver_id": "commander-alice",
+    "role": "incident_commander",
+    "decision": "approved",
+    "approved_at_epoch": 4500,
+    "scope": "inc-24-001/production"
+  }
+}

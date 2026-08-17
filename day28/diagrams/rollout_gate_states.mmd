@@ -1,0 +1,15 @@
+stateDiagram-v2
+  [*] --> IdentityCheck
+  IdentityCheck --> BlockedIdentity: identity 不一致
+  IdentityCheck --> CanaryCheck: identity_bound
+  CanaryCheck --> Blocked: p95 / error / cohort 失敗
+  CanaryCheck --> FlagCheck: canary_passed
+  FlagCheck --> Blocked: key / mapping / kill switch 失敗
+  FlagCheck --> RollbackCheck: flag_bound
+  RollbackCheck --> Blocked: target / trigger / timeout 缺失
+  RollbackCheck --> HealthCheck: rollback_ready
+  HealthCheck --> Blocked: run / readback 不一致
+  HealthCheck --> Ready: health_passed
+  Ready --> [*]
+  BlockedIdentity --> [*]
+  Blocked --> [*]

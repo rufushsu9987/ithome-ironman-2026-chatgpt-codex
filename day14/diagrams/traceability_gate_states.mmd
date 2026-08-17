@@ -1,0 +1,15 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> COLLECTING: freeze intent
+    COLLECTING --> TRACEABLE: all AC + changes + artifacts + approval match
+    COLLECTING --> BLOCKED_MISSING: acceptance/change/artifact missing
+    COLLECTING --> BLOCKED_LINK: one-way or wrong reverse link
+    COLLECTING --> BLOCKED_IDENTITY: intent/context/commit mismatch
+    COLLECTING --> BLOCKED_RELEASE: approval missing or owner mismatch
+    BLOCKED_MISSING --> COLLECTING: collect new evidence
+    BLOCKED_LINK --> COLLECTING: rebuild trace bundle
+    BLOCKED_IDENTITY --> DECLARED: create new intent for new commit
+    BLOCKED_RELEASE --> COLLECTING: obtain explicit approval
+    TRACEABLE --> VERIFY: immutable report
+    VERIFY --> RELEASE_GATE: behavior and release checks
+    RELEASE_GATE --> [*]

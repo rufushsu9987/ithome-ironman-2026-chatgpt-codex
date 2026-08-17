@@ -1,0 +1,12 @@
+stateDiagram-v2
+    [*] --> CloseoutVerified
+    CloseoutVerified --> InventoryChecking
+    InventoryChecking --> BlockedIdentity: identity or digest drift
+    InventoryChecking --> BlockedInventory: archive incomplete
+    InventoryChecking --> EvidenceChecking: inventory verified
+    EvidenceChecking --> BlockedEvidence: missing / unreadable / invalid storage
+    EvidenceChecking --> RetentionChecking: all required evidence readable
+    RetentionChecking --> BlockedRetention: expired or too short
+    RetentionChecking --> RetentionReady: window and policy pass
+    RetentionReady --> HumanPolicyDecision
+    HumanPolicyDecision --> [*]

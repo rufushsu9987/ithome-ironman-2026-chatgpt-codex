@@ -1,0 +1,48 @@
+{
+  "identity": {
+    "release_id": "r28",
+    "environment": "staging",
+    "cohort": "canary-10",
+    "flag_key": "search-beta",
+    "run_id": "run-28"
+  },
+  "stage_order": ["identity", "canary", "flag", "rollback", "health"],
+  "stages": {
+    "identity": {
+      "state": "identity_bound",
+      "evidence_digest": "sha256:rollout-28-current",
+      "audit_event_id": "audit-28-identity"
+    },
+    "canary": {
+      "state": "canary_passed",
+      "p95_ms": 220,
+      "error_rate": 0.005,
+      "cohort_match": true,
+      "evidence_digest": "sha256:rollout-28-current",
+      "audit_event_id": "audit-28-canary"
+    },
+    "flag": {
+      "state": "flag_bound",
+      "flag_key": "search-beta",
+      "mapping_match": true,
+      "kill_switch_ready": true,
+      "evidence_digest": "sha256:rollout-28-current",
+      "audit_event_id": "audit-28-flag"
+    },
+    "rollback": {
+      "state": "rollback_ready",
+      "target": "release-27",
+      "trigger": "error_rate_or_p95",
+      "timeout_seconds": 300,
+      "evidence_digest": "sha256:rollout-28-current",
+      "audit_event_id": "audit-28-rollback"
+    },
+    "health": {
+      "state": "health_passed",
+      "readback_match": true,
+      "run_id": "run-28",
+      "evidence_digest": "sha256:rollout-28-current",
+      "audit_event_id": "audit-28-health"
+    }
+  }
+}

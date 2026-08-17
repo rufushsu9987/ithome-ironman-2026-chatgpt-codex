@@ -1,0 +1,8 @@
+{
+  "intent_id": "intent-export-20260814-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "acceptance_ids": ["AC-01", "AC-02", "AC-03"],
+  "change_ids": ["CH-01"],
+  "release_owner": "release-owner"
+}

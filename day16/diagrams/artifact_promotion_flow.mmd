@@ -1,0 +1,13 @@
+flowchart LR
+    R[Reproducibility Gate\nsource + input + environment] --> I[Promotion Intent\nrun + expected artifacts]
+    I --> C[Capture artifact manifest]
+    C --> S{Exact artifact set?}
+    S -->|否| B1[BLOCKED_SET\n重新整理 bundle]
+    S -->|是| D{Digest and identity match?}
+    D -->|否| B2[BLOCKED_STALE\n重新產生 artifact]
+    D -->|是| Q{Required checks passed?}
+    Q -->|否| B3[BLOCKED_QA\n補齊或修復 QA]
+    Q -->|是| P{Promotion request valid?}
+    P -->|否| B4[NEEDS_REPLAN\n重新確認 target／owner]
+    P -->|是| G[PROMOTABLE\n交給 release owner]
+    G -.-> H[Human release decision]

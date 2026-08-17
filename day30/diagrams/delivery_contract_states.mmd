@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> CHECKING: intent + observation loaded
+    CHECKING --> BLOCKED_IDENTITY: identity drift
+    CHECKING --> BLOCKED_STAGE: stage missing/order/state
+    CHECKING --> BLOCKED_ARTIFACT: artifact or QA gap
+    CHECKING --> BLOCKED_BOUNDARY: external boundary drift
+    CHECKING --> DELIVERY_READY: all contract checks pass
+    DELIVERY_READY --> HANDOFF_READY: owner + decision + idempotency
+    HANDOFF_READY --> [*]
+    BLOCKED_IDENTITY --> [*]
+    BLOCKED_STAGE --> [*]
+    BLOCKED_ARTIFACT --> [*]
+    BLOCKED_BOUNDARY --> [*]

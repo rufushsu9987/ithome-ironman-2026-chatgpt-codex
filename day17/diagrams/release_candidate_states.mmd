@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> CHECKING: observe candidate manifest
+    CHECKING --> WAITING_WINDOW: checks pass, window inactive
+    CHECKING --> BLOCKED_SET_OR_QA: set or required check fails
+    CHECKING --> BLOCKED_ROLLBACK: rollback not ready
+    CHECKING --> BLOCKED_APPROVAL: target / owner / approval mismatch
+    CHECKING --> RELEASABLE: all gates pass
+    WAITING_WINDOW --> CHECKING: window opens
+    BLOCKED_SET_OR_QA --> DECLARED: regenerate or repair evidence
+    BLOCKED_ROLLBACK --> DECLARED: prepare matching rollback
+    BLOCKED_APPROVAL --> DECLARED: human confirms intent
+    RELEASABLE --> RELEASED_BY_HUMAN: human deploys or publishes
+    RELEASED_BY_HUMAN --> [*]

@@ -1,0 +1,12 @@
+stateDiagram-v2
+    [*] --> EXECUTED
+    EXECUTED --> OBSERVING: target applied
+    EXECUTED --> BLOCKED_ROLLBACK: command incomplete
+    OBSERVING --> BLOCKED_IDENTITY: identity drift
+    OBSERVING --> BLOCKED_WINDOW: window or samples short
+    OBSERVING --> BLOCKED_RECOVERY: metric/check failed
+    OBSERVING --> BLOCKED_TRAFFIC: route not serving target
+    OBSERVING --> BLOCKED_EVIDENCE: digest missing or changed
+    OBSERVING --> RECOVERY_VERIFIED: all evidence pass
+    RECOVERY_VERIFIED --> HUMAN_CLOSEOUT: owner reviews evidence
+    HUMAN_CLOSEOUT --> [*]

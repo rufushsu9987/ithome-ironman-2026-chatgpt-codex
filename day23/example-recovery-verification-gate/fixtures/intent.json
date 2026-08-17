@@ -1,0 +1,23 @@
+{
+  "rollback_id": "rollback-23-001",
+  "run_id": "run-23-1",
+  "source_candidate_id": "candidate-a",
+  "target_candidate_id": "candidate-b",
+  "source_commit": "commit-a",
+  "input_digest": "digest-a",
+  "environment_id": "env-prod",
+  "target": "production",
+  "min_recovery_window_seconds": 900,
+  "min_samples": 100,
+  "recovery_thresholds": {
+    "availability_min": 0.999,
+    "p95_latency_max_ms": 450,
+    "error_rate_max": 0.01,
+    "queue_depth_max": 20
+  },
+  "required_checks": ["rollback_execution", "health", "traffic", "data_integrity"],
+  "recovery_evidence": {
+    "name": "recovery-observation",
+    "digest": "sha256:recovery-current"
+  }
+}

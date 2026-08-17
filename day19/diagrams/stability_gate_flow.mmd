@@ -1,0 +1,13 @@
+flowchart LR
+    V[Deployment Verification\nverified at a point in time] --> W[Observe stability window\nread-only]
+    W --> I{Identity still matches?}
+    I -->|否| B1[BLOCKED_IDENTITY\n不要混用別的 run]
+    I -->|是| C{Window complete\nand samples enough?}
+    C -->|否| B2[BLOCKED_WINDOW\n等待更多真實樣本]
+    C -->|是| M{Error / latency / saturation\ninside thresholds?}
+    M -->|否| B3[BLOCKED_METRICS\n保留超標 evidence]
+    M -->|是| Q{Required checks\nall passed?}
+    Q -->|否| B4[BLOCKED_CHECKS\n補齊 observation]
+    Q -->|是| T{Traffic still serves\nthe candidate?}
+    T -->|否| B5[BLOCKED_TRAFFIC\nroute 可能已漂移]
+    T -->|是| S[POST_DEPLOYMENT_STABLE\n交給人類決定下一步]

@@ -1,0 +1,37 @@
+{
+  "intent_id": "intent-orders-current",
+  "run_id": "run-orders-current",
+  "candidate_id": "candidate-orders-current",
+  "source_commit": "commit-current",
+  "input_digest": "sha256:orders-input-current",
+  "environment_id": "env-staging-current",
+  "target": "staging",
+  "proposer_id": "change-author",
+  "observed_at_epoch": 1100,
+  "evidence": {
+    "slo_impact": {
+      "state": "slo_impact_clear",
+      "digest": "sha256:slo-evidence-current"
+    },
+    "release_candidate": {
+      "state": "release_candidate_ready",
+      "digest": "sha256:candidate-evidence-current"
+    }
+  },
+  "approvals": [
+    {
+      "approver_id": "approver-alice",
+      "role": "release_owner",
+      "decision": "approved",
+      "approved_at_epoch": 1000,
+      "scope": "staging/candidate-orders-current"
+    },
+    {
+      "approver_id": "approver-bob",
+      "role": "release_owner",
+      "decision": "approved",
+      "approved_at_epoch": 1010,
+      "scope": "staging/candidate-orders-current"
+    }
+  ]
+}

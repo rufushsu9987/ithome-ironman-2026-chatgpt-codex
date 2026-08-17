@@ -1,0 +1,21 @@
+{
+  "intent_id": "intent-export-20260816-001",
+  "run_id": "run-export-20260816-001",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v1",
+  "environment_id": "env-python311",
+  "target": "release-candidate",
+  "owner": "release-owner@example.invalid",
+  "expected_artifacts": [
+    {
+      "artifact_id": "export-bundle.tgz",
+      "artifact_digest": "sha256:bundle-v1",
+      "required_checks": ["integrity", "compatibility"]
+    },
+    {
+      "artifact_id": "verification-report.json",
+      "artifact_digest": "sha256:report-v1",
+      "required_checks": ["schema", "source_match"]
+    }
+  ]
+}

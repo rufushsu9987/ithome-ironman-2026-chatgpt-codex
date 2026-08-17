@@ -1,0 +1,54 @@
+{
+  "incident_id": "inc-26-001",
+  "closeout_id": "closeout-26-001",
+  "run_id": "run-26-1",
+  "evidence_digest": "sha256:incident-26-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "observed_at_epoch": 10000,
+  "access_request": {
+    "requester_id": "alice",
+    "requester_role": "incident_responder",
+    "purpose": "incident_investigation",
+    "evidence_names": ["recovery", "impact"],
+    "field_scope": {
+      "recovery": ["candidate_id", "state"],
+      "impact": ["window_seconds", "sample_count", "aggregate_metrics"]
+    },
+    "requested_at_epoch": 9900,
+    "expires_at_epoch": 10900
+  },
+  "evidence_inventory": {
+    "recovery": {
+      "readable": true,
+      "storage_state": "archived",
+      "digest": "sha256:incident-26-current",
+      "fields": ["candidate_id", "state", "evidence_digest"]
+    },
+    "impact": {
+      "readable": true,
+      "storage_state": "online",
+      "digest": "sha256:incident-26-current",
+      "fields": ["window_seconds", "sample_count", "aggregate_metrics"]
+    }
+  },
+  "access_approval": {
+    "incident_id": "inc-26-001",
+    "closeout_id": "closeout-26-001",
+    "run_id": "run-26-1",
+    "evidence_digest": "sha256:incident-26-current",
+    "environment_id": "env-prod",
+    "target": "production",
+    "requester_id": "alice",
+    "purpose": "incident_investigation",
+    "decision": "approved",
+    "scope": "inc-26-001/production/alice/incident_investigation",
+    "approved_at_epoch": 9700
+  },
+  "audit_anchor": {
+    "event_id": "access-event-26-001",
+    "request_digest": "sha256:request-26-current",
+    "evidence_digest": "sha256:incident-26-current",
+    "recorded_at_epoch": 9950
+  }
+}

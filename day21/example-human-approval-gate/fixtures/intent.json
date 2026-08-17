@@ -1,0 +1,29 @@
+{
+  "intent_id": "intent-orders-current",
+  "run_id": "run-orders-current",
+  "candidate_id": "candidate-orders-current",
+  "source_commit": "commit-current",
+  "input_digest": "sha256:orders-input-current",
+  "environment_id": "env-staging-current",
+  "target": "staging",
+  "proposer_id": "change-author",
+  "required_evidence": [
+    {
+      "name": "slo_impact",
+      "state": "slo_impact_clear",
+      "digest": "sha256:slo-evidence-current"
+    },
+    {
+      "name": "release_candidate",
+      "state": "release_candidate_ready",
+      "digest": "sha256:candidate-evidence-current"
+    }
+  ],
+  "approval_policy": {
+    "minimum_approvals": 2,
+    "required_role": "release_owner",
+    "max_age_seconds": 900,
+    "require_distinct_approvers": true,
+    "forbid_self_approval": true
+  }
+}

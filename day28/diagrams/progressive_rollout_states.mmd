@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> IdentityChecking
+    IdentityChecking --> BlockedIdentity: identity drift
+    IdentityChecking --> CanaryChecking: identity bound
+    CanaryChecking --> BlockedCanary: threshold / cohort fail
+    CanaryChecking --> FlagChecking: canary passed
+    FlagChecking --> BlockedFlag: mapping / kill switch fail
+    FlagChecking --> RollbackChecking: flag bound
+    RollbackChecking --> BlockedRollback: target / trigger / timeout missing
+    RollbackChecking --> HealthChecking: rollback ready
+    HealthChecking --> BlockedHealth: old run or readback mismatch
+    HealthChecking --> PipelineReady: same run and digest
+    PipelineReady --> Handoff: next owner decides
+    Handoff --> [*]

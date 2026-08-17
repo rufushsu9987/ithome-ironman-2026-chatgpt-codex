@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> CHECKING: capture observed manifest
+    CHECKING --> PROMOTABLE: exact set + identity + QA pass
+    CHECKING --> BLOCKED_STALE: run or digest drift
+    CHECKING --> BLOCKED_QA: required check missing / failed
+    CHECKING --> BLOCKED_SET: expected missing / unknown artifact
+    CHECKING --> NEEDS_REPLAN: target or owner mismatch
+    BLOCKED_STALE --> DECLARED: regenerate from current run
+    BLOCKED_QA --> CHECKING: complete required checks
+    BLOCKED_SET --> DECLARED: revise bundle intentionally
+    NEEDS_REPLAN --> DECLARED: human confirms new intent
+    PROMOTABLE --> [*]

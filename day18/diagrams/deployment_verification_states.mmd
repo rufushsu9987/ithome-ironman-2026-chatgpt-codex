@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> OBSERVING: freeze candidate intent
+    OBSERVING --> BLOCKED_IDENTITY: candidate or digest drift
+    OBSERVING --> BLOCKED_ROLLOUT: unavailable or rollout incomplete
+    OBSERVING --> BLOCKED_REPLICAS: ready replicas below expectation
+    OBSERVING --> BLOCKED_CHECKS: required check missing or not passed
+    OBSERVING --> BLOCKED_TRAFFIC: route serves another candidate
+    OBSERVING --> DEPLOYMENT_VERIFIED: all observations match
+    BLOCKED_IDENTITY --> DECLARED: create new evidence or intent
+    BLOCKED_ROLLOUT --> OBSERVING: rollout completes
+    BLOCKED_REPLICAS --> OBSERVING: replicas recover
+    BLOCKED_CHECKS --> OBSERVING: checks rerun with evidence
+    BLOCKED_TRAFFIC --> OBSERVING: route read-back matches
+    DEPLOYMENT_VERIFIED --> RELEASED_BY_HUMAN: human makes release decision
+    RELEASED_BY_HUMAN --> [*]

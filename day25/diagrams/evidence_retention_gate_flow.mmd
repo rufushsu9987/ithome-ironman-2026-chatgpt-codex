@@ -1,0 +1,16 @@
+flowchart TD
+    A[Incident Closeout] --> B[Retention Intent]
+    A --> C[Evidence Inventory]
+    A --> D[Legal Hold / Access Scope]
+    B --> E{Identity and digest match?}
+    C --> E
+    D --> E
+    E -->|No| X[BLOCKED_IDENTITY]
+    E -->|Yes| F{Inventory verified and archive complete?}
+    F -->|No| Y[BLOCKED_INVENTORY]
+    F -->|Yes| G{Required evidence readable?}
+    G -->|No| Z[BLOCKED_EVIDENCE]
+    G -->|Yes| H{Retention window still valid?}
+    H -->|No| R[BLOCKED_RETENTION]
+    H -->|Yes| S[RETENTION_READY]
+    S --> T[Human decides archive / delete policy]

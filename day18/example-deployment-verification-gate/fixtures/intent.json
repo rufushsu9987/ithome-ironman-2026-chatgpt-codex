@@ -1,0 +1,16 @@
+{
+  "intent_id": "intent-orders-20260818-001",
+  "run_id": "run-orders-20260818-001",
+  "candidate_id": "rc-orders-20260818.1",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v3",
+  "environment_id": "env-python311",
+  "target": "staging",
+  "required_checks": ["rollout", "health", "smoke", "traffic"],
+  "expected_deployment": {
+    "artifact_digest": "sha256:orders-release-v3",
+    "version": "2026.08.18.1",
+    "config_digest": "sha256:orders-config-v7",
+    "replicas": 3
+  }
+}

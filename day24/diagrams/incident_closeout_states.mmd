@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> RECOVERY_VERIFIED
+    RECOVERY_VERIFIED --> IMPACT_REVIEW: recovery digest read back
+    IMPACT_REVIEW --> FOLLOWUP_REVIEW: window and samples pass
+    IMPACT_REVIEW --> BLOCKED_IMPACT: window or samples short
+    FOLLOWUP_REVIEW --> LEARNING_REVIEW: owners and due times pass
+    FOLLOWUP_REVIEW --> FOLLOWUP_BLOCKED: missing or overdue work
+    LEARNING_REVIEW --> APPROVAL_REVIEW: postmortem and pack bound
+    LEARNING_REVIEW --> LEARNING_BLOCKED: digest or status drift
+    APPROVAL_REVIEW --> CLOSEOUT_ELIGIBLE: role, scope, age pass
+    APPROVAL_REVIEW --> APPROVAL_BLOCKED: approval invalid
+    CLOSEOUT_ELIGIBLE --> HUMAN_CLOSEOUT: owner decides
+    HUMAN_CLOSEOUT --> [*]

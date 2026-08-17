@@ -1,0 +1,31 @@
+{
+  "intent_id": "intent-orders-20260819-001",
+  "run_id": "run-orders-20260819-001",
+  "candidate_id": "rc-orders-20260819.1",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v4",
+  "environment_id": "env-python311",
+  "target": "staging",
+  "observation_window": {
+    "state": "complete",
+    "duration_seconds": 420,
+    "samples": 7
+  },
+  "metrics": {
+    "error_rate": 0.004,
+    "p95_latency_ms": 210,
+    "saturation_percent": 61
+  },
+  "checks": {
+    "window_complete": "passed",
+    "health": "passed",
+    "errors": "passed",
+    "latency": "passed",
+    "saturation": "passed",
+    "traffic": "passed"
+  },
+  "traffic": {
+    "serving_candidate_id": "rc-orders-20260819.1",
+    "route_state": "serving"
+  }
+}

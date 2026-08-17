@@ -1,0 +1,10 @@
+flowchart LR
+    I[Freeze Change Intent\nsource + input + environment] --> S[Capture run identity]
+    S --> T{Toolchain and\ndependency lock match?}
+    T -->|否| B1[BLOCKED\nrebuild in declared environment]
+    T -->|是| O[Collect expected outputs]
+    O --> L{Every output ready\nand identity-bound?}
+    L -->|否| B2[BLOCKED\nmissing or stale artifact]
+    L -->|是| R[REPRODUCIBLE\nhand to Traceability / Verify]
+    B1 --> S
+    B2 --> O

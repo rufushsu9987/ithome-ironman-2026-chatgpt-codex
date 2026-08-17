@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> IdentityChecking
+    IdentityChecking --> BlockedIdentity: identity drift
+    IdentityChecking --> OrderChecking: identity matches
+    OrderChecking --> BlockedOrder: stage order invalid
+    OrderChecking --> StageChecking: order valid
+    StageChecking --> BlockedStage: missing / unknown / invalid stage
+    StageChecking --> EvidenceChecking: states and digests match
+    EvidenceChecking --> BlockedEvidence: readback / approval / audit missing
+    EvidenceChecking --> PipelineReady: all evidence bound
+    PipelineReady --> Handoff: next executor decides
+    Handoff --> [*]
+    BlockedIdentity --> [*]
+    BlockedOrder --> [*]
+    BlockedStage --> [*]
+    BlockedEvidence --> [*]

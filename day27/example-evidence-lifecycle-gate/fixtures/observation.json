@@ -1,0 +1,27 @@
+{
+  "incident_id": "inc-27-001",
+  "closeout_id": "closeout-27-001",
+  "run_id": "run-27-1",
+  "evidence_digest": "sha256:incident-27-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "stages": {
+    "closeout": {
+      "state": "closed",
+      "evidence_digest": "sha256:incident-27-current",
+      "audit_event_id": "closeout-event-27-001"
+    },
+    "retention": {
+      "state": "retention_ready",
+      "evidence_digest": "sha256:incident-27-current",
+      "readback_passed": true,
+      "audit_event_id": "retention-event-27-001"
+    },
+    "access": {
+      "state": "access_eligible",
+      "evidence_digest": "sha256:incident-27-current",
+      "approval_bound": true,
+      "audit_event_id": "access-event-27-001"
+    }
+  }
+}

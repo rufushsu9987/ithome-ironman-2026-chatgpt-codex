@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> OBSERVING: freeze identity and SLO thresholds
+    OBSERVING --> BLOCKED_IDENTITY: run, source or target drift
+    OBSERVING --> BLOCKED_EVIDENCE: window or samples short
+    OBSERVING --> BLOCKED_SLO: availability, latency or burn rate exceeds SLO
+    OBSERVING --> BLOCKED_CHECKS: check missing or not passed
+    OBSERVING --> BLOCKED_TRAFFIC: route serves another candidate
+    OBSERVING --> SLO_IMPACT_CLEAR: evidence stays inside SLO
+    BLOCKED_IDENTITY --> DECLARED: create a new intent
+    BLOCKED_EVIDENCE --> OBSERVING: collect more observations
+    BLOCKED_SLO --> OBSERVING: investigate and collect new evidence
+    BLOCKED_CHECKS --> OBSERVING: rerun checks with fresh evidence
+    BLOCKED_TRAFFIC --> OBSERVING: verify route read-back
+    SLO_IMPACT_CLEAR --> HUMAN_DECISION: release owner reviews evidence
+    HUMAN_DECISION --> [*]

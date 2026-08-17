@@ -1,0 +1,13 @@
+flowchart LR
+    P[Artifact Promotion\nexact bundle + identity] --> C[Release Candidate\ncandidate_id + target]
+    C --> W{Release window\ncurrently open?}
+    W -->|否| B1[WAITING_WINDOW\n等時間窗或重新規劃]
+    W -->|是| S{Exact artifact set\nand required checks?}
+    S -->|否| B2[BLOCKED_SET_OR_QA\n補齊或重跑驗證]
+    S -->|是| R{Rollback bundle\nready and matching?}
+    R -->|否| B3[BLOCKED_ROLLBACK\n準備可驗證退路]
+    R -->|是| A{Human approval\ntarget + owner valid?}
+    A -->|否| B4[BLOCKED_APPROVAL\n回到責任人確認]
+    A -->|是| G[RELEASABLE\n交給 release owner]
+    G -.-> H[Human deploy / publish decision]
+    H -.-> X[RELEASED_BY_HUMAN]

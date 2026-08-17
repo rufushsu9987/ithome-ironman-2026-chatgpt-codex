@@ -1,0 +1,55 @@
+{
+  "incident_id": "inc-25-001",
+  "closeout_id": "closeout-25-001",
+  "run_id": "run-25-1",
+  "evidence_digest": "sha256:incident-25-current",
+  "environment_id": "env-prod",
+  "target": "production",
+  "observed_at_epoch": 2000000,
+  "retention": {
+    "state": "inventory_verified",
+    "archive_complete": true
+  },
+  "legal_hold": {
+    "state": "active",
+    "reason": "audit-window"
+  },
+  "access_scope": "incident:inc-25-001",
+  "evidence": {
+    "recovery": {
+      "readable": true,
+      "storage_state": "archived",
+      "digest": "sha256:incident-25-current",
+      "created_at_epoch": 1000000,
+      "retain_until_epoch": 2604800
+    },
+    "impact": {
+      "readable": true,
+      "storage_state": "archived",
+      "digest": "sha256:incident-25-current",
+      "created_at_epoch": 1000000,
+      "retain_until_epoch": 2604800
+    },
+    "followup": {
+      "readable": true,
+      "storage_state": "online",
+      "digest": "sha256:incident-25-current",
+      "created_at_epoch": 1000000,
+      "retain_until_epoch": 2604800
+    },
+    "learning": {
+      "readable": true,
+      "storage_state": "archived",
+      "digest": "sha256:incident-25-current",
+      "created_at_epoch": 1000000,
+      "retain_until_epoch": 2604800
+    },
+    "approval": {
+      "readable": true,
+      "storage_state": "archived",
+      "digest": "sha256:incident-25-current",
+      "created_at_epoch": 1000000,
+      "retain_until_epoch": 2604800
+    }
+  }
+}

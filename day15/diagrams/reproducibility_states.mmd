@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> CAPTURING: intent frozen
+    CAPTURING --> REPRODUCIBLE: identity + environment + outputs match
+    CAPTURING --> BLOCKED_SOURCE: source commit mismatch
+    CAPTURING --> BLOCKED_INPUT: input digest mismatch
+    CAPTURING --> BLOCKED_ENV: toolchain or lock mismatch
+    CAPTURING --> BLOCKED_OUTPUT: output missing / not ready
+    BLOCKED_SOURCE --> DECLARED: create new intent or rerun
+    BLOCKED_INPUT --> DECLARED: recapture approved input
+    BLOCKED_ENV --> CAPTURING: rebuild declared environment
+    BLOCKED_OUTPUT --> CAPTURING: regenerate evidence
+    REPRODUCIBLE --> [*]

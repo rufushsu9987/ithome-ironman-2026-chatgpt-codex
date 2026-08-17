@@ -1,0 +1,10 @@
+flowchart LR
+    I[Delivery Intent\ncontract identity] --> C[Context\ncontext_bound]
+    C --> P[Plan\nplan_approved]
+    P --> E[Execute\nexecuted_scoped]
+    E --> V[Verify\nverified]
+    V --> R[Review\nreview_complete]
+    R --> D[Deliver\ndeliverable_bound]
+    D --> G{Identity +\nartifacts + QA?}
+    G -->|全部一致| L[delivery_ready\n交給 release lane]
+    G -->|任一缺口| B[blocked_delivery\n固定 reason code]

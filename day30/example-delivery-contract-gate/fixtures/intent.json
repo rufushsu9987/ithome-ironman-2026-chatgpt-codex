@@ -1,0 +1,16 @@
+{
+  "identity": {
+    "series_id": "chatgpt-codex-engineering",
+    "day": 30,
+    "contract_id": "delivery-30-001",
+    "run_id": "run-30",
+    "source_digest": "sha256:day30-source",
+    "evidence_digest": "sha256:day30-evidence",
+    "policy_version": "delivery-policy-v1",
+    "owner": "producer",
+    "target": "release-lane"
+  },
+  "stage_order": ["context", "plan", "execute", "verify", "review", "deliver"],
+  "required_deliverables": ["article", "example", "deck", "video", "subtitles", "media_qa"],
+  "external_boundary": "release_lane"
+}

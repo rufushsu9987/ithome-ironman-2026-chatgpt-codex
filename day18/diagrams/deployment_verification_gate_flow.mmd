@@ -1,0 +1,13 @@
+flowchart LR
+    R[Release Candidate Gate\nreleasable] --> O[Observe deployment\nread-only]
+    O --> I{Candidate + artifact + config\nidentity match?}
+    I -->|否| B1[BLOCKED_IDENTITY\n不要把別的 run 當成功]
+    I -->|是| D{Available + rollout complete?}
+    D -->|否| B2[BLOCKED_ROLLOUT\n等待或修復部署]
+    D -->|是| P{All replicas ready?}
+    P -->|否| B3[BLOCKED_REPLICAS\n保留觀察證據]
+    P -->|是| Q{Required checks passed?}
+    Q -->|否| B4[BLOCKED_CHECKS\n補跑 health / smoke]
+    Q -->|是| T{Traffic serves candidate?}
+    T -->|否| B5[BLOCKED_TRAFFIC\ncontrol plane ≠ data plane]
+    T -->|是| V[DEPLOYMENT_VERIFIED\n交給人類決定下一步]

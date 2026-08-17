@@ -1,0 +1,11 @@
+flowchart LR
+  I[identity\n固定 release / cohort / run] --> C[canary\nerror rate + p95]
+  C --> F[flag\nkey + mapping + kill switch]
+  F --> R[rollback\ntarget + trigger + timeout]
+  R --> H[health\n同一輪 readback]
+  H --> Ready[pipeline_ready]
+  I -. 漂移 .-> Blocked[blocked + reason code]
+  C -. 超標 .-> Blocked
+  F -. 對應錯誤 .-> Blocked
+  R -. 契約缺欄 .-> Blocked
+  H -. run 不同 .-> Blocked

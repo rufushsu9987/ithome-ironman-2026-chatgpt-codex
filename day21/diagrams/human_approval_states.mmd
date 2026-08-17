@@ -1,0 +1,17 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> EVIDENCE_BOUND: freeze identity and required evidence
+    EVIDENCE_BOUND --> AWAITING_APPROVAL: automated evidence is clear
+    EVIDENCE_BOUND --> BLOCKED_IDENTITY: run, source or target drift
+    EVIDENCE_BOUND --> BLOCKED_EVIDENCE: evidence missing or digest mismatch
+    AWAITING_APPROVAL --> BLOCKED_APPROVAL: rejected, expired or wrong role
+    AWAITING_APPROVAL --> BLOCKED_SCOPE: candidate or target scope drift
+    AWAITING_APPROVAL --> BLOCKED_COUNT: not enough distinct approvers
+    AWAITING_APPROVAL --> APPROVAL_ELIGIBLE: policy fully satisfied
+    APPROVAL_ELIGIBLE --> HUMAN_ACTION: release owner reviews evidence
+    HUMAN_ACTION --> [*]
+    BLOCKED_IDENTITY --> DECLARED: create a new intent
+    BLOCKED_EVIDENCE --> EVIDENCE_BOUND: collect fresh evidence
+    BLOCKED_APPROVAL --> AWAITING_APPROVAL: request valid approval
+    BLOCKED_SCOPE --> DECLARED: bind a new target or candidate
+    BLOCKED_COUNT --> AWAITING_APPROVAL: collect distinct approvals

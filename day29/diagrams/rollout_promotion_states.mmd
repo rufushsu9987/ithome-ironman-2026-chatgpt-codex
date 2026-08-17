@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> Observing
+    Observing --> BlockedObservation: window / samples insufficient
+    Observing --> MetricsChecked: window_complete
+    MetricsChecked --> BlockedMetrics: threshold exceeded
+    MetricsChecked --> PolicyChecked: metrics_passed
+    PolicyChecked --> BlockedPolicy: cohort / step invalid
+    PolicyChecked --> ApprovalChecked: step_allowed
+    ApprovalChecked --> BlockedApproval: missing / expired / drifted
+    ApprovalChecked --> HandoffChecked: approval_bound
+    HandoffChecked --> BlockedHandoff: owner / decision / idempotency missing
+    HandoffChecked --> PromotionReady: handoff_ready
+    PromotionReady --> [*]

@@ -1,0 +1,15 @@
+stateDiagram-v2
+    [*] --> RetentionReady
+    RetentionReady --> AccessRequested: request purpose and fields
+    AccessRequested --> BlockedIdentity: identity or digest drift
+    AccessRequested --> BlockedScope: role or purpose denied
+    AccessRequested --> BlockedFields: fields exceed allowlist
+    AccessRequested --> BlockedPolicy: window or approval invalid
+    AccessRequested --> AccessEligible: all evidence checks pass
+    AccessEligible --> AccessGranted: external executor authorizes
+    AccessGranted --> AuditedRead: event recorded
+    AuditedRead --> [*]
+    BlockedIdentity --> [*]
+    BlockedScope --> [*]
+    BlockedFields --> [*]
+    BlockedPolicy --> [*]

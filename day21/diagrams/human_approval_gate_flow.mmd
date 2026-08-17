@@ -1,0 +1,9 @@
+flowchart LR
+    S[SLO Impact Clear] --> I{Change identity matches?}
+    I -->|否| B1[BLOCKED_IDENTITY\n不要混用別的 run 或 candidate]
+    I -->|是| E{Required evidence\nstate and digest match?}
+    E -->|否| B2[BLOCKED_EVIDENCE\n補齊或重新產生 evidence]
+    E -->|是| P{Approval policy valid?}
+    P -->|否| B3[BLOCKED_APPROVAL\nrole / age / scope / count]
+    P -->|是| C[APPROVAL_ELIGIBLE\n交給 release owner]
+    C --> H[HUMAN ACTION\n人類決定是否執行]

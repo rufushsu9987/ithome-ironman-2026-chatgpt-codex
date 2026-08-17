@@ -1,0 +1,22 @@
+{
+  "intent_id": "intent-release-20260817-001",
+  "run_id": "run-release-20260817-001",
+  "source_commit": "abc1234",
+  "input_digest": "sha256:orders-input-v2",
+  "environment_id": "env-python311",
+  "candidate_id": "rc-orders-20260817.1",
+  "target": "staging",
+  "owner": "release-owner@example.invalid",
+  "release_window": {
+    "start": "2026-08-17T10:00:00Z",
+    "end": "2026-08-17T11:00:00Z"
+  },
+  "required_checks": ["smoke", "compatibility", "migration_dry_run"],
+  "expected_artifacts": [
+    {"artifact_id": "release-bundle.tgz", "artifact_digest": "sha256:release-v1"},
+    {"artifact_id": "release-manifest.json", "artifact_digest": "sha256:manifest-v1"},
+    {"artifact_id": "rollback-bundle.tgz", "artifact_digest": "sha256:rollback-v1"}
+  ],
+  "rollback_artifact_id": "rollback-bundle.tgz",
+  "rollback_digest": "sha256:rollback-v1"
+}

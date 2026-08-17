@@ -1,0 +1,12 @@
+{
+  "identity": {
+    "release_id": "r28",
+    "environment": "staging",
+    "cohort": "canary-10",
+    "flag_key": "search-beta",
+    "run_id": "run-28"
+  },
+  "evidence_digest": "sha256:rollout-28-current",
+  "thresholds": {"max_p95_ms": 450, "max_error_rate": 0.02},
+  "required_stages": ["identity", "canary", "flag", "rollback", "health"]
+}

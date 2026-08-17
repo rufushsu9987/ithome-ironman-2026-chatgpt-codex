@@ -1,0 +1,40 @@
+{
+  "rollback_id": "rollback-23-001",
+  "run_id": "run-23-1",
+  "source_candidate_id": "candidate-a",
+  "target_candidate_id": "candidate-b",
+  "source_commit": "commit-a",
+  "input_digest": "digest-a",
+  "environment_id": "env-prod",
+  "target": "production",
+  "rollback": {
+    "status": "completed",
+    "applied_target_candidate_id": "candidate-b",
+    "execution_evidence": "sha256:rollback-execution"
+  },
+  "recovery_window": {
+    "complete": true,
+    "duration_seconds": 900,
+    "sample_count": 120
+  },
+  "metrics": {
+    "availability": 0.9995,
+    "p95_latency_ms": 320,
+    "error_rate": 0.002,
+    "queue_depth": 8
+  },
+  "checks": {
+    "rollback_execution": "passed",
+    "health": "passed",
+    "traffic": "passed",
+    "data_integrity": "passed"
+  },
+  "traffic": {
+    "state": "serving",
+    "serving_candidate_id": "candidate-b"
+  },
+  "recovery_evidence": {
+    "name": "recovery-observation",
+    "digest": "sha256:recovery-current"
+  }
+}

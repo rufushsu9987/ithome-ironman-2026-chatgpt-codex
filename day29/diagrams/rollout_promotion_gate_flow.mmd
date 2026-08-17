@@ -1,0 +1,11 @@
+flowchart TD
+    A[Observe window complete] --> B{Metrics pass?}
+    B -->|No| X1[blocked_metrics]
+    B -->|Yes| C{Cohort and step allowed?}
+    C -->|No| X2[blocked_policy]
+    C -->|Yes| D{Approval bound to promotion?}
+    D -->|No| X3[blocked_approval]
+    D -->|Yes| E{Handoff and idempotency complete?}
+    E -->|No| X4[blocked_handoff]
+    E -->|Yes| F[promotion_ready]
+    F --> G[Release owner / executor boundary]

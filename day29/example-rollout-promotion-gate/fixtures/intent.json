@@ -1,0 +1,23 @@
+{
+  "identity": {
+    "release_id": "release-29",
+    "environment": "staging",
+    "current_cohort": "canary-10",
+    "target_cohort": "canary-25",
+    "run_id": "run-29",
+    "promotion_id": "promotion-29-001",
+    "evidence_digest": "sha256:promotion-29-current",
+    "policy_version": "rollout-policy-v3"
+  },
+  "minimum_window_seconds": 600,
+  "minimum_samples": 1000,
+  "evaluation_time": "2026-08-13T12:00:00+00:00",
+  "thresholds": {
+    "max_error_rate": 0.02,
+    "max_p95_ms": 450,
+    "max_saturation": 0.75
+  },
+  "max_step_percent": 25,
+  "allowed_target_cohorts": ["canary-25", "canary-50"],
+  "approval_expires_at": "2026-08-14T12:00:00+00:00"
+}
