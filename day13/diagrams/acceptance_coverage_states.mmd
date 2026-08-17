@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> DECLARED
+    DECLARED --> COLLECTING: intent frozen
+    COLLECTING --> COVERED: every AC passed + linked
+    COLLECTING --> BLOCKED_MISSING: AC result missing
+    COLLECTING --> BLOCKED_FAILED: AC status failed
+    COLLECTING --> BLOCKED_LINK: evidence not linked
+    COLLECTING --> BLOCKED_IDENTITY: intent/context/commit mismatch
+    BLOCKED_MISSING --> COLLECTING: collect missing evidence
+    BLOCKED_FAILED --> COLLECTING: rerun or replan
+    BLOCKED_LINK --> COLLECTING: repair new bundle
+    BLOCKED_IDENTITY --> DECLARED: create new intent
+    COVERED --> READY_VERIFY: immutable report
+    READY_VERIFY --> [*]

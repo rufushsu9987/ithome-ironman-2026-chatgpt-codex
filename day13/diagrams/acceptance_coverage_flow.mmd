@@ -1,0 +1,7 @@
+flowchart LR
+    A[Acceptance criteria\nAC-01…AC-N] --> B[Evidence Binding\nidentity matches]
+    B --> C[Collect result\nstatus + evidence ids]
+    C --> D{Every AC\ncovered?}
+    D -->|否| E[BLOCKED\nmissing / failed / unlinked]
+    D -->|是| F[Coverage report\nallowed=true]
+    F --> G[Verify Matrix\nbehavior and quality]

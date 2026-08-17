@@ -1,0 +1,6 @@
+{
+  "intent_id": "intent-export-20260813-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "acceptance_ids": ["AC-01", "AC-02", "AC-03"]
+}

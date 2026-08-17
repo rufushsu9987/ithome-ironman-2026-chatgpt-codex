@@ -1,0 +1,18 @@
+{
+  "evidence_id": "coverage-20260813-001",
+  "intent_id": "intent-export-20260813-001",
+  "context_id": "orders-export",
+  "source_commit": "abc1234",
+  "observation_id": "obs-20260813-001",
+  "captured_at": "2026-08-13T09:30:00Z",
+  "acceptance_results": [
+    {"acceptance_id": "AC-01", "status": "passed", "evidence_ids": ["test-001"]},
+    {"acceptance_id": "AC-02", "status": "passed", "evidence_ids": ["test-002"]},
+    {"acceptance_id": "AC-03", "status": "passed", "evidence_ids": ["review-001"]}
+  ],
+  "artifacts": [
+    {"artifact_id": "test-001", "kind": "test-log", "acceptance_ids": ["AC-01"], "source_commit": "abc1234"},
+    {"artifact_id": "test-002", "kind": "test-log", "acceptance_ids": ["AC-02"], "source_commit": "abc1234"},
+    {"artifact_id": "review-001", "kind": "review", "acceptance_ids": ["AC-03"], "source_commit": "abc1234"}
+  ]
+}
