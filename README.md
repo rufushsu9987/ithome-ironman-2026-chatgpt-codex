@@ -12,25 +12,25 @@
 | 4 | 會跑不等於能改！用最小權限與工作樹隔離守住 Codex 執行邊界 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10401856) | [觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw) | [文章、程式碼與圖解](./day04/) |
 | 5 | 每個 Agent 都說完成了？用 Verify Matrix 收斂測試、Diff 與交付證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402088) | [觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s) | [文章、程式碼與圖解](./day05/) |
 | 6 | 測試通過還不夠！用 Deliver Pack 讓下一個人接得上 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402184) | [觀看影片](https://www.youtube.com/watch?v=DIRZ35Ha8mo) | [文章、程式碼與圖解](./day06/) |
-| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=ZuFy4cbZ2EU) | [文章、程式碼與圖解](./day07/) |
+| 7 | 測試都通過，為什麼還不能發布？用 Release Gate 管好相依性、回滾與最終責任 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402339) | [觀看影片](https://www.youtube.com/watch?v=CxkXkj0WBbY) | [文章、程式碼與圖解](./day07/) |
 | 8 | 發布之後才是真正的考驗！用 Audit Trail 與 Incident Pack 讓 AI 變更可追溯、可復原 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=nZ_tF2Hj754) | [文章、程式碼與圖解](./day08/) |
 | 9 | 事故處理完就結束了？用 Learning Pack 把生產證據帶回下一次 AI 變更 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402613) | [觀看影片](https://www.youtube.com/watch?v=gKLJz1hjh5o) | [文章、程式碼與圖解](./day09/) |
 | 10 | Learning Pack 放進 Context 就安全了嗎？用 Freshness Gate 擋住過期規則 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402721) | [觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs) | [文章、程式碼與圖解](./day10/) |
 | 11 | Freshness Gate 通過就能一路改下去嗎？用 Change Budget 擋住範圍膨脹 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10402889) | [觀看影片](https://www.youtube.com/watch?v=sWSrKdn0Hr4) | [文章、程式碼與圖解](./day11/) |
-| 12 | 測試通過就算是這次變更的證據嗎？用 Evidence Binding 綁住 diff、測試與 review | [閱讀文章](https://ithelp.ithome.com.tw/articles/10403128) | 待上傳 | [文章、程式碼與圖解](./day12/) |
+| 12 | 測試通過就算是這次變更的證據嗎？用 Evidence Binding 綁住 diff、測試與 review | [閱讀文章](https://ithelp.ithome.com.tw/articles/10403128) | [觀看影片](https://www.youtube.com/watch?v=OdeYRhXQWQ8) | [文章、程式碼與圖解](./day12/) |
 | 13 | 測試都通過，怎麼知道需求沒有漏掉？用 Acceptance Coverage 補齊驗收證據 | [閱讀文章](https://ithelp.ithome.com.tw/articles/10403422) | [觀看影片](https://www.youtube.com/watch?v=jEiTypirhQE) | [文章、程式碼與圖解](./day13/) |
 | 14 | 驗收證據都齊了，真的能交付嗎？用 Traceability Gate 把需求、變更與發布決策串起來 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day14/) |
-| 15 | 需求、變更都串起來了，明天還能重現嗎？用 Reproducibility Gate 鎖住環境與輸入 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day15/) |
-| 16 | 重現成功就能直接交付嗎？用 Artifact Promotion Gate 擋住錯誤產物 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day16/) |
-| 17 | Artifact 可以晉級，真的能安全發布嗎？用 Release Candidate Gate 鎖住最後一哩 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day17/) |
-| 18 | Release Candidate 通過就真的上線了嗎？用 Deployment Verification Gate 核對實際狀態 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day18/) |
-| 19 | Deployment Verified 就穩定了嗎？用 Post-Deployment Stability Gate 觀察真實流量 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day19/) |
-| 20 | Stability 通過，使用者真的沒受影響嗎？用 SLO Impact Gate 看真實可靠性 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day20/) |
+| 15 | 需求、變更都串起來了，明天還能重現嗎？用 Reproducibility Gate 鎖住環境與輸入 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=Iu-o0OX3fM0) | [文章、程式碼與圖解](./day15/) |
+| 16 | 重現成功就能直接交付嗎？用 Artifact Promotion Gate 擋住錯誤產物 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=kjYAqt0z6r0) | [文章、程式碼與圖解](./day16/) |
+| 17 | Artifact 可以晉級，真的能安全發布嗎？用 Release Candidate Gate 鎖住最後一哩 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=gpBnXZF7PvY) | [文章、程式碼與圖解](./day17/) |
+| 18 | Release Candidate 通過就真的上線了嗎？用 Deployment Verification Gate 核對實際狀態 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=fYAj2GRxCPg) | [文章、程式碼與圖解](./day18/) |
+| 19 | Deployment Verified 就穩定了嗎？用 Post-Deployment Stability Gate 觀察真實流量 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=CPDnEn8Lbv4) | [文章、程式碼與圖解](./day19/) |
+| 20 | Stability 通過，使用者真的沒受影響嗎？用 SLO Impact Gate 看真實可靠性 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=oZtQrDtVtkY) | [文章、程式碼與圖解](./day20/) |
 | 21 | 證據都通過就能發布嗎？用 Human Approval Gate 把不可逆動作交回人類 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day21/) |
-| 22 | 出問題要回滾，但誰來決定回滾到哪？用 Rollback Gate 把風險寫成可驗收的 evidence | 待發布 | 待上傳 | [文章、程式碼與圖解](./day22/) |
-| 23 | 回滾成功就算恢復了嗎？用 Recovery Verification Gate 確認系統真的回到安全狀態 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day23/) |
-| 24 | 恢復驗證通過就能結案嗎？用 Incident Closeout Gate 把復原、學習與追蹤責任綁起來 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day24/) |
-| 25 | Incident 結案後就能刪證據嗎？用 Evidence Retention Gate 守住留存期限與回讀能力 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day25/) |
+| 22 | 出問題要回滾，但誰來決定回滾到哪？用 Rollback Gate 把風險寫成可驗收的 evidence | 待發布 | [觀看影片](https://www.youtube.com/watch?v=PzRInI1yziM) | [文章、程式碼與圖解](./day22/) |
+| 23 | 回滾成功就算恢復了嗎？用 Recovery Verification Gate 確認系統真的回到安全狀態 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=sE4AWJA6cqE) | [文章、程式碼與圖解](./day23/) |
+| 24 | 恢復驗證通過就能結案嗎？用 Incident Closeout Gate 把復原、學習與追蹤責任綁起來 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=YNWzL3GgHc4) | [文章、程式碼與圖解](./day24/) |
+| 25 | Incident 結案後就能刪證據嗎？用 Evidence Retention Gate 守住留存期限與回讀能力 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=5Ro2Ge_DYcI) | [文章、程式碼與圖解](./day25/) |
 | 26 | 證據留住了，誰都能讀嗎？用 Evidence Access Gate 守住最小權限與稽核範圍 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day26/) |
 | 27 | Evidence 都通過了，整條 Incident Pipeline 真的接得起來嗎？用 Lifecycle Gate 串起 Closeout、Retention 與 Access | 待發布 | 待上傳 | [文章、程式碼與圖解](./day27/) |
 | 28 | rollout 不是一次推完就好！用 Progressive Rollout Gate 把 canary、flag、rollback 與健康檢查綁成可觀察流程 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day28/) |
@@ -51,7 +51,7 @@
 - `day03/example-context/`：可執行的 Context Gate 範例與測試
 - `day03/diagrams/context_pack_flow.mmd`：Context Pack 流程圖原始檔
 - `day03/diagrams/plan_contract.mmd`：Plan Contract 圖解原始檔
-- Day 3 YouTube 影片：[mW9jNtuN8Fo](https://www.youtube.com/watch?v=mW9jNtuN8Fo)
+- Day 3 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=mW9jNtuN8Fo)
 - Day 3 iThome 文章：[10401737](https://ithelp.ithome.com.tw/articles/10401737)
 
 ## Day 4 收錄內容
@@ -60,7 +60,7 @@
 - `day04/example-execution-guard/`：可執行的 Execution Guard 範例與 9 項測試
 - `day04/diagrams/execution_boundary.mmd`：執行邊界流程圖原始檔
 - `day04/diagrams/stop_conditions.mmd`：停止條件狀態圖原始檔
-- Day 4 YouTube 影片：[k2UEzgYGGyw](https://www.youtube.com/watch?v=k2UEzgYGGyw)
+- Day 4 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=k2UEzgYGGyw)
 - Day 4 iThome 文章：[10401856](https://ithelp.ithome.com.tw/articles/10401856)
 
 ## Day 5 收錄內容
@@ -69,7 +69,7 @@
 - `day05/example-verify-matrix/`：可執行的 Verify Matrix 範例與 12 項測試
 - `day05/diagrams/verify_matrix.mmd`：Verify Matrix 流程圖原始檔
 - `day05/diagrams/evidence_layers.mmd`：四層證據圖解原始檔
-- Day 5 YouTube 影片：[SLtDRNtKy0s](https://www.youtube.com/watch?v=SLtDRNtKy0s)
+- Day 5 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=SLtDRNtKy0s)
 - Day 5 iThome 文章：[10402088](https://ithelp.ithome.com.tw/articles/10402088)
 
 ## Day 6 收錄內容
@@ -78,7 +78,7 @@
 - `day06/example-deliver-pack/`：可執行的 Deliver Pack 驗證器與 9 項測試
 - `day06/diagrams/deliver_pack_flow.mmd`：Deliver Pack 流程圖原始檔
 - `day06/diagrams/handoff_states.mmd`：Verified、Ready for handoff 與 Published 狀態圖原始檔
-- Day 6 YouTube 影片：[DIRZ35Ha8mo](https://www.youtube.com/watch?v=DIRZ35Ha8mo)
+- Day 6 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=DIRZ35Ha8mo)
 - Day 6 iThome 文章：[10402184](https://ithelp.ithome.com.tw/articles/10402184)
 
 ## Day 7 收錄內容
@@ -87,7 +87,7 @@
 - `day07/example-release-gate/`：可執行的 fail-closed Release Gate 驗證器、fixtures 與 7 項測試
 - `day07/diagrams/release_gate_flow.mmd`：多個 Deliver Pack 進入 Release Gate 的流程圖原始檔
 - `day07/diagrams/release_states.mmd`：OPEN、BLOCKED、READY 與 rollback 狀態圖原始檔
-- Day 7 YouTube 影片：[[ZuFy4cbZ2EU](https://www.youtube.com/watch?v=ZuFy4cbZ2EU](https://youtu.be/CxkXkj0WBbY?si=KVppCOuNHouV5GwD))
+- Day 7 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=CxkXkj0WBbY)
 - Day 7 iThome 文章：[10402339](https://ithelp.ithome.com.tw/articles/10402339)
 
 ## Day 8 收錄內容
@@ -96,10 +96,10 @@
 - `day08/example-incident-pack/`：可執行的事件驗證、JSONL Audit Trail 與 Incident Pack 範例，含 5 項測試
 - `day08/diagrams/incident_lifecycle.mmd`：發布後健康檢查、事故處理與回滾流程圖原始檔
 - `day08/autocut-deck/`：Day 8 AutoCut HTML deck、theme、slides.js、template.json
-- Day 8 影片：`day08-cc-final.mp4`（正式交付檔，不納入 Git repository）
+- Day 8 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=nZ_tF2Hj754)
 - Day 8 封面：`day08-fish-tts-thumbnail.jpg`
 - Day 8 字幕：`day08-fish-tts-subtitles.srt`（YouTube 繁體中文 CC）
-- Day 8 YouTube 影片：[nZ_tF2Hj754](https://www.youtube.com/watch?v=nZ_tF2Hj754)
+- Day 8 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=nZ_tF2Hj754)
 - Day 8 iThome 文章：待發布
 
 ## Day 8 影片 QA
@@ -117,7 +117,7 @@
 - `day09/example-learning-pack/`：可執行的 Learning Pack 驗證器與 idempotent 套用範例
 - `day09/diagrams/learning_feedback_loop.mmd`：事故證據回流至下一次 Context 的流程圖原始檔
 - `day09/autocut-deck/`：Day 9 AutoCut HTML deck、theme、slides.js、template.json
-- Day 9 YouTube 影片：[gKLJz1hjh5o](https://www.youtube.com/watch?v=gKLJz1hjh5o)
+- Day 9 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=gKLJz1hjh5o)
 - Day 9 iThome 文章：[10402613](https://ithelp.ithome.com.tw/articles/10402613)
 
 ## Day 9 影片 QA
@@ -136,7 +136,7 @@
 - `day10/example-freshness-gate/`：可執行的唯讀 Freshness Gate 與 6 項測試
 - `day10/diagrams/freshness_gate_flow.mmd`：執行前 freshness 檢查流程圖原始檔
 - `day10/diagrams/freshness_states.mmd`：Fresh／Stale／Drifted／Blocked 狀態圖原始檔
-- Day 10 YouTube 影片：[Jt_6iBtCFjs](https://www.youtube.com/watch?v=Jt_6iBtCFjs)
+- Day 10 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=Jt_6iBtCFjs)
 - Day 10 字幕：`zh-TW` YouTube CC，status `serving`
 - Day 10 iThome 文章：[10402721](https://ithelp.ithome.com.tw/articles/10402721)
 
@@ -147,7 +147,7 @@
 - `day11/example-change-budget/`：可執行的唯讀 Change Budget Gate、fixtures 與 8 項測試
 - `day11/diagrams/change_budget_flow.mmd`：Change Budget 執行流程圖原始檔
 - `day11/diagrams/change_budget_states.mmd`：Budget 狀態圖原始檔
-- Day 11 YouTube 影片：[sWSrKdn0Hr4](https://www.youtube.com/watch?v=sWSrKdn0Hr4)
+- Day 11 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=sWSrKdn0Hr4)
 - Day 11 字幕：`zh-TW` YouTube CC，53 個單行 cues，status `serving`
 - Day 11 iThome 文章：[10402889](https://ithelp.ithome.com.tw/articles/10402889)
 
@@ -158,7 +158,7 @@
 - `day12/example-evidence-binding/`：可執行的唯讀 Evidence Binding Gate 與 8 項測試
 - `day12/diagrams/evidence_binding_flow.mmd`：Evidence Binding 流程圖原始檔
 - `day12/diagrams/evidence_binding_states.mmd`：Evidence Binding 狀態圖原始檔
-- Day 12 影片：待上傳（本機交付檔，不納入 Git repository）
+- Day 12 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=OdeYRhXQWQ8)
 - Day 12 字幕：待上傳（獨立 UTF-8 SRT）
 - Day 12 iThome 文章：待發布
 
@@ -169,7 +169,7 @@
 - `day13/example-acceptance-coverage/`：可執行的唯讀 Acceptance Coverage Gate 與 9 項測試
 - `day13/diagrams/acceptance_coverage_flow.mmd`：Acceptance Coverage 流程圖原始檔
 - `day13/diagrams/acceptance_coverage_states.mmd`：Acceptance Coverage 狀態圖原始檔
-- Day 13 影片：待上傳（本機交付檔，不納入 Git repository）
+- Day 13 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=jEiTypirhQE)
 - Day 13 字幕：待上傳（獨立 UTF-8 SRT）
 - Day 13 iThome 文章：待發布
 
@@ -180,7 +180,7 @@
 - `day15/example-reproducibility-gate/`：可執行的唯讀 Reproducibility Gate、fixtures 與 10 項測試
 - `day15/diagrams/reproducibility_gate_flow.mmd`：重現前提與 output identity 流程圖原始檔
 - `day15/diagrams/reproducibility_states.mmd`：DECLARED、REPRODUCIBLE 與 BLOCKED 狀態圖原始檔
-- Day 15 影片：待上傳（本機 clean MP4，不納入 Git repository）
+- Day 15 YouTube 影片：[觀看影片](https://www.youtube.com/watch?v=Iu-o0OX3fM0)
 - Day 15 字幕：待上傳（獨立 UTF-8 SRT）
 - Day 15 iThome 文章：待發布
 
