@@ -35,4 +35,4 @@
 | 27 | Evidence 都通過了，整條 Incident Pipeline 真的接得起來嗎？用 Lifecycle Gate 串起 Closeout、Retention 與 Access | 待發布 | 待上傳 | [文章、程式碼與圖解](./day27/) |
 | 28 | rollout 不是一次推完就好！用 Progressive Rollout Gate 把 canary、flag、rollback 與健康檢查綁成可觀察流程 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day28/) |
 | 29 | 放量不是看到綠燈就全開！用 Rollout Promotion Gate 把觀察窗、分段決策與責任交接綁在一起 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day29/) |
-| 30 | AI 會跑不等於能交付！用 Delivery Contract 把 30 天工作流收成可回讀的工程閉環 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day30/) |
+| 30 | AI 會跑不等於能交付！用 Delivery Contract 把 30 天工作流收成可回讀的工程閉環 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=5Ro2Ge_DYcI) | [文章、程式碼與圖解](./day30/) |
