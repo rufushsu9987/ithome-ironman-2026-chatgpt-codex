@@ -26,7 +26,7 @@
 | 18 | Release Candidate 通過就真的上線了嗎？用 Deployment Verification Gate 核對實際狀態 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=fYAj2GRxCPg) | [文章、程式碼與圖解](./day18/) |
 | 19 | Deployment Verified 就穩定了嗎？用 Post-Deployment Stability Gate 觀察真實流量 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=CPDnEn8Lbv4) | [文章、程式碼與圖解](./day19/) |
 | 20 | Stability 通過，使用者真的沒受影響嗎？用 SLO Impact Gate 看真實可靠性 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=oZtQrDtVtkY) | [文章、程式碼與圖解](./day20/) |
-| 21 | 證據都通過就能發布嗎？用 Human Approval Gate 把不可逆動作交回人類 | 待發布 | 待上傳 | [文章、程式碼與圖解](./day21/) |
+| 21 | 證據都通過就能發布嗎？用 Human Approval Gate 把不可逆動作交回人類 | 待發布 | [待上傳](https://youtu.be/FTtbrb0r52s?si=ccZ3bmnmV_JvuAgh) | [文章、程式碼與圖解](./day21/) |
 | 22 | 出問題要回滾，但誰來決定回滾到哪？用 Rollback Gate 把風險寫成可驗收的 evidence | 待發布 | [觀看影片](https://www.youtube.com/watch?v=PzRInI1yziM) | [文章、程式碼與圖解](./day22/) |
 | 23 | 回滾成功就算恢復了嗎？用 Recovery Verification Gate 確認系統真的回到安全狀態 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=sE4AWJA6cqE) | [文章、程式碼與圖解](./day23/) |
 | 24 | 恢復驗證通過就能結案嗎？用 Incident Closeout Gate 把復原、學習與追蹤責任綁起來 | 待發布 | [觀看影片](https://www.youtube.com/watch?v=YNWzL3GgHc4) | [文章、程式碼與圖解](./day24/) |
