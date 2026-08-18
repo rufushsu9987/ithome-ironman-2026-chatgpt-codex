@@ -4,7 +4,8 @@
 
 ## 系列內容
 
-[解說頻道](https://youtube.com/channel/UCSwTYj59dr3-qVO_AQu8vyA?si=ZDHYFy30xRNX8zc7)
+[Youtube](https://youtube.com/channel/UCSwTYj59dr3-qVO_AQu8vyA?si=ZDHYFy30xRNX8zc7)
+[iThome](https://ithelp.ithome.com.tw/users/20183428/ironman/9128)
 
 | Day | 主題 | 
 | --- | --- |
